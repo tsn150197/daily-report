@@ -1,0 +1,2 @@
+class Trainee < User
+end
