@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DailyReport</title>
+    <title><%= full_title yield :title %></title>
+    <%= favicon_link_tag yield :icon %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<% if yield(:theme) == "theme1" %>
+    	<%= stylesheet_link_tag "theme1", media: "all",
+	      "data-turbolinks-track": "reload" %>
+		<% end %>
   </head>
 
   <body>
     <%= yield %>
+    <% if yield(:theme) == "theme1" %>
+      <%= javascript_include_tag "theme1",
+        "data-turbolinks-track": "reload" %>
+    <% end %>
   </body>
 </html>
