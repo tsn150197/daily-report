@@ -1,2 +1,14 @@
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      daily_report: Daily report
+    header:
+      search: Search
+      input_search: Enter search...
+      notifications: Notifications
+      view_all_noti: View All Notifications
+      profile: Profile
+      change_password: Change password
+      logout: Logout
+    sidebar:
+      permission: Title

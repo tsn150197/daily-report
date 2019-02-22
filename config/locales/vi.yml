@@ -1,2 +1,14 @@
 vi:
-  hello: "Xin chào thế giới"
+  layouts:
+    application:
+      daily_report: Báo cáo hàng ngày
+    header:
+      search: Tìm kiếm
+      input_search: Nhập nội dung tìm kiếm
+      notifications: Thông báo
+      view_all_noti: Xem tất cả thông báo
+      profile: Hồ sơ
+      change_password: Đổi mật khẩu
+      logout: Đăng xuất
+    sidebar:
+      permission: Tiêu đề
