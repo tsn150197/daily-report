@@ -6,10 +6,12 @@
           <%= link_to "", class: "sidebar-link td-n" do %>
             <div class="peers ai-c fxw-nw">
               <div class="peer">
-                <div class="logo"><%= image_tag "logo.png", alt: "" %></div>
+                <div class="logo">
+                  <%= image_tag "ruby.png", size:Settings.ruby_size %>
+                </div>
               </div>
               <div class="peer peer-greed">
-                <h5 class="lh-1 mB-0 logo-text"><%= t ".permission" %></h5>
+                <h5 class="lh-1 mB-0 logo-text"><%= t ".daily_report" %></h5>
               </div>
             </div>
           <% end %>
@@ -24,30 +26,9 @@
       </div>
     </div>
     <ul class="sidebar-menu scrollable pos-r">
-      <li class="nav-item mT-30 active">
-        <%= link_to "#", class: "sidebar-link" do %>
-          <span class="icon-holder">
-            <i class="c-blue-500 ti-home"></i>
-          </span>
-          <span class="title">Link 1</span>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "#", class: "sidebar-link" do %>
-          <span class="icon-holder">
-            <i class="c-brown-500 ti-email"></i>
-          </span>
-          <span class="title">Link 2</span>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "#", class: "sidebar-link" do %>
-          <span class="icon-holder">
-            <i class="c-deep-orange-500 ti-share"></i>
-          </span>
-          <span class="title">Link 3</span>
-        <% end %>
-      </li>
+      <% if current_user.type == "Admin" %>
+        <%= render "admin/sidebar/item" %>
+      <% end %>
     </ul>
   </div>
 </div>
