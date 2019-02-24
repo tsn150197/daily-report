@@ -1,9 +1,17 @@
 <li class="nav-item mT-30 active">
-  <%= link_to admin_root_path, class: "sidebar-link" do %>
+  <%= link_to trainer_root_path, class: "sidebar-link" do %>
     <span class="icon-holder">
       <i class="c-blue-500 ti-home"></i>
     </span>
     <span class="title"><%= t ".home_page" %></span>
+  <% end %>
+</li>
+<li class="nav-item">
+  <%= link_to "#", class: "sidebar-link" do %>
+    <span class="icon-holder">
+      <i class="c-blue-500 fa fa-file-text"></i>
+    </span>
+    <span class="title"><%= t ".list_reports" %></span>
   <% end %>
 </li>
 <li class="nav-item dropdown">
