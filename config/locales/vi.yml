@@ -11,4 +11,16 @@ vi:
       change_password: Đổi mật khẩu
       logout: Đăng xuất
     sidebar:
-      permission: Tiêu đề
+      daily_report: Báo cáo hàng ngày
+  shared:
+    home:
+      home_page: Trang chủ
+      hi: Xin chào
+      content1: Chúc bạn một ngày tốt lành!
+  admin:
+    sidebar:
+      item:
+        home_page: Trang chủ
+        list_accounts: Danh sách tài khoản
+        add_account: Thêm tài khoản
+        show_list_accounts: Xem danh sách tài khoản

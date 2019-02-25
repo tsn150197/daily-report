@@ -1,4 +1,17 @@
-.row.gap-20.masonry.pos-r.main-body {
-  height: 1855px !important;
-  position: relative !important;
+@media (max-width: 600px) {
+  .language {
+    display: none;
+  }
+  .notification {
+    right: -150px !important;
+  }
+  .home-search {
+    width: inherit;
+  }
+}
+
+@media (max-width: 400px) {
+  .dropdown-notification {
+    right: -160px !important;
+  }
 }
