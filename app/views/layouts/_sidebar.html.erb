@@ -29,6 +29,9 @@
       <% if current_user.type == "Admin" %>
         <%= render "admin/sidebar/item" %>
       <% end %>
+      <% if current_user.type == "Trainer" %>
+        <%= render "trainer/sidebar/item" %>
+      <% end %>
     </ul>
   </div>
 </div>

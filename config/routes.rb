@@ -4,5 +4,8 @@ Rails.application.routes.draw do
       root "home#index"
       resources :home, only: %i(index)
     end
+    namespace :trainer do
+      root "home#index"
+    end
   end
 end
