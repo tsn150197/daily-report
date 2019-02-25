@@ -88,3 +88,14 @@ vi:
       previous: "&lsaquo; Truớc"
       next: "Sau &rsaquo;"
       truncate: "&hellip;"
+      permission: Tiêu đề
+  logins:
+    new:
+      daily_report: Báo cáo hàng ngày
+      login: Đăng nhập
+      login_title: Đăng nhập báo cáo hàng ngày
+      valid_email: "Email là bắt buộc và có dạng: ex@abc.xyz"
+      valid_password: Mật khẩu là bắt buộc
+      remember_me: Hãy nhớ tôi trên máy tính này
+      forgot: Quên
+      password: mật khẩu?
