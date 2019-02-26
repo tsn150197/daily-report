@@ -17,6 +17,9 @@ vi:
       home_page: Trang chủ
       hi: Xin chào
       content1: Chúc bạn một ngày tốt lành!
+    error_messages:
+      content1: Biểu mẫu có chứa
+      content2: lỗi
   admin:
     sidebar:
       item:
@@ -24,6 +27,20 @@ vi:
         list_accounts: Danh sách tài khoản
         add_account: Thêm tài khoản
         show_list_accounts: Xem danh sách tài khoản
+    users:
+      new:
+        add_account: Thêm tài khoản
+        email: Email
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        type: Kiểu người dùng
+        team: Nhóm
+        add: Thêm
+        confirm: Bạn chắc chắn muốn thêm người dùng này?
+      create:
+        success: Tạo tài khoản thành công
+        error: Lỗi. Không thể tạo được tài khoản!
+        no_check_box: Vui lòng chọn nhóm!
   trainer:
     sidebar:
       item:
@@ -32,3 +49,17 @@ vi:
         list_accounts: Danh sách tài khoản
         add_account: Thêm tài khoản
         show_list_accounts: Xem danh sách tài khoản
+    users:
+      new:
+        add_account: Thêm tài khoản
+        email: Email
+        password: Mật khẩu
+        password_confirmation: Xác nhận mật khẩu
+        type: Kiểu người dùng
+        team: Nhóm
+        add: Thêm
+        confirm: Bạn chắc chắn muốn thêm người dùng này?
+      create:
+        success: Tạo tài khoản thành công
+        error: Lỗi. Không thể tạo được tài khoản!
+        no_check_box: Vui lòng chọn nhóm!

@@ -17,6 +17,9 @@ en:
       home_page: Home page
       hi: Hi
       content1: Have a good day!
+    error_messages:
+      content1: The form contains
+      content2: error
   admin:
     sidebar:
       item:
@@ -24,6 +27,20 @@ en:
         list_accounts: List accounts
         add_account: Add account
         show_list_accounts: Show list accounts
+    users:
+      new:
+        add_account: Add account
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        type: Type
+        team: Team
+        add: Add
+        confirm: You definitely want to add this user?
+      create:
+        success: Account successfully created.
+        error: Error. Unable to create an account!
+        no_check_box: Please select the team!
   trainer:
     sidebar:
       item:
@@ -32,3 +49,17 @@ en:
         list_accounts: List account
         add_account: Add account
         show_list_accounts: Show list accounts
+    users:
+      new:
+        add_account: Add account
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        type: Type
+        team: Team
+        add: Add
+        confirm: You definitely want to add this user?
+      create:
+        success: Account successfully created.
+        error: Error. Unable to create an account!
+        no_check_box: Please select the team!
