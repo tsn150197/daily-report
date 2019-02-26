@@ -3,3 +3,6 @@ ruby_size: 65
 name_maximum: 50
 email_maximum: 255
 password_minimum: 6
+user_pagination: 12
+window_pagination: 2
+user_avt_size: 130

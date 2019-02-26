@@ -28,6 +28,10 @@ vi:
         add_account: Thêm tài khoản
         show_list_accounts: Xem danh sách tài khoản
     users:
+      user:
+        delete: Xóa
+      index:
+        list_accounts: Danh sách tài khoản
       new:
         add_account: Thêm tài khoản
         email: Email
@@ -50,6 +54,10 @@ vi:
         add_account: Thêm tài khoản
         show_list_accounts: Xem danh sách tài khoản
     users:
+      user:
+        delete: Xóa
+      index:
+        list_accounts: Danh sách tài khoản
       new:
         add_account: Thêm tài khoản
         email: Email
@@ -63,3 +71,10 @@ vi:
         success: Tạo tài khoản thành công
         error: Lỗi. Không thể tạo được tài khoản!
         no_check_box: Vui lòng chọn nhóm!
+  views:
+    pagination:
+      first: "&laquo; Đầu"
+      last: "Cuối &raquo;"
+      previous: "&lsaquo; Truớc"
+      next: "Sau &rsaquo;"
+      truncate: "&hellip;"

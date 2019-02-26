@@ -28,6 +28,10 @@ en:
         add_account: Add account
         show_list_accounts: Show list accounts
     users:
+      user:
+        delete: Delete
+      index:
+        list_accounts: List accounts
       new:
         add_account: Add account
         email: Email
@@ -50,6 +54,10 @@ en:
         add_account: Add account
         show_list_accounts: Show list accounts
     users:
+      user:
+        delete: Delete
+      index:
+        list_accounts: List accounts
       new:
         add_account: Add account
         email: Email
@@ -63,3 +71,10 @@ en:
         success: Account successfully created.
         error: Error. Unable to create an account!
         no_check_box: Please select the team!
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"

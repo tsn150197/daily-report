@@ -15,3 +15,19 @@
     right: -160px !important;
   }
 }
+
+.pagination {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.user {
+  max-height: 190px;
+  min-height: 190px;
+  .row {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
