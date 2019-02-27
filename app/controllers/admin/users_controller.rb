@@ -1,6 +1,12 @@
 class Admin::UsersController < ApplicationController
   before_action :admin?
 
+  def index
+    users = Trainer.all + Trainee.all
+    @users = Kaminari.paginate_array(users).page(params[:page])
+                     .per(Settings.user_pagination)
+  end
+
   def new
     @user = User.new
     tranfer_data
@@ -13,8 +19,6 @@ class Admin::UsersController < ApplicationController
       save_user_team @user, params[:teams]
     else
       handle_fail
-      tranfer_data
-      render :new
     end
   end
 
@@ -48,5 +52,7 @@ class Admin::UsersController < ApplicationController
     else
       flash.now[:danger] = t ".no_check_box"
     end
+    tranfer_data
+    render :new
   end
 end
