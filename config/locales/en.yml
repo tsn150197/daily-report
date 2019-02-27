@@ -1,4 +1,5 @@
 en:
+  login_fail: Please login
   layouts:
     application:
       daily_report: Daily report
@@ -99,3 +100,5 @@ en:
       remember_me: Remember me on this computer
       forgot: Forgot
       password: Password?
+    create:
+      danger: Invalid email/password combination

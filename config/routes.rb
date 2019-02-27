@@ -14,5 +14,6 @@ Rails.application.routes.draw do
       end
     end
     resources :users, only: %i(show)
+    resources :logins, only: %i(create)
   end
 end

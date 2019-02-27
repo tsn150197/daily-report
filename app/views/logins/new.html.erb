@@ -1,4 +1,3 @@
-
 <%= provide :title, t(".login") %>
 <%= provide :icon, "icons/login.ico" %>
 <div class="limiter">
@@ -7,10 +6,13 @@
       <div class="login100-pic js-tilt" data-tilt>
         <%= image_tag "img-01.png", alt: "IMG" %>
       </div>
-      <%= form_with url: "#", class: "login100-form validate-form" do |form| %>
+      <%= form_with url: logins_path, class: "login100-form validate-form", local: true do |form| %>
         <span class="login100-form-title">
           <%= t".login_title" %>
         </span>
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
         <div class="wrap-input100 validate-input"
           data-validate="<%= t ".valid_email" %>">
           <%= form.text_field :email, class: :input100, placeholder: :Email %>

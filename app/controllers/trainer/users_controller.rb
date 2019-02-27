@@ -1,4 +1,5 @@
 class Trainer::UsersController < ApplicationController
+  before_action :logged_in_user
   before_action :trainer?
   before_action :find_user, only: %i(destroy)
 
@@ -45,10 +46,6 @@ class Trainer::UsersController < ApplicationController
     end
     flash[:success] = t ".success"
     redirect_to new_trainer_user_path
-  end
-
-  def trainer?
-    redirect_to "#" unless current_user.is_a? Trainer
   end
 
   def tranfer_data
