@@ -1,5 +1,6 @@
 class Admin::UsersController < ApplicationController
   before_action :admin?
+  before_action :find_user, only: %i(destroy)
 
   def index
     users = Trainer.all + Trainee.all
@@ -20,6 +21,15 @@ class Admin::UsersController < ApplicationController
     else
       handle_fail
     end
+  end
+
+  def destroy
+    if @user&.destroy
+      flash[:success] = t ".success"
+    else
+      flash[:danger] = t ".danger"
+    end
+    redirect_to admin_users_path
   end
 
   private
@@ -54,5 +64,11 @@ class Admin::UsersController < ApplicationController
     end
     tranfer_data
     render :new
+  end
+
+  def find_user
+    return if (@user = User.find_by id: params[:id])
+    flash[:danger] = t ".found"
+    redirect_to admin_users_path
   end
 end

@@ -30,6 +30,7 @@ vi:
     users:
       user:
         delete: Xóa
+        message_delete: Bạn có muốn xóa người dùng này?
       index:
         list_accounts: Danh sách tài khoản
       new:
@@ -45,6 +46,10 @@ vi:
         success: Tạo tài khoản thành công
         error: Lỗi. Không thể tạo được tài khoản!
         no_check_box: Vui lòng chọn nhóm!
+      destroy:
+        success: Người dùng đã xoá
+        danger: Người dùng đã bị xoá
+        found: Không tìm thấy người dùng
   trainer:
     sidebar:
       item:
@@ -56,6 +61,7 @@ vi:
     users:
       user:
         delete: Xóa
+        message_delete: Bạn có muốn xóa người dùng này?
       index:
         list_accounts: Danh sách tài khoản
       new:
@@ -71,6 +77,10 @@ vi:
         success: Tạo tài khoản thành công
         error: Lỗi. Không thể tạo được tài khoản!
         no_check_box: Vui lòng chọn nhóm!
+      destroy:
+        success: Người dùng đã xoá
+        danger: Người dùng đã bị xoá
+        found: Không tìm thấy người dùng
   views:
     pagination:
       first: "&laquo; Đầu"

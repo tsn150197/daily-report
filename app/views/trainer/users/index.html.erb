@@ -9,6 +9,9 @@
             <h3 class="c-grey-900 mB-20">
               <%= t ".list_accounts" %>
             </h3>
+            <% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %> mT-30"><%= message %></div>
+            <% end %>
             <div class="row mT-30">
               <div class="col-lg-12 row mL-5">
                 <%= render partial: "user", collection: @users %>
