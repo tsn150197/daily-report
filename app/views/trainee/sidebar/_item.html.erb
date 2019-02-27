@@ -1,0 +1,37 @@
+<li class="nav-item mT-30 active">
+  <%= link_to trainee_root_path, class: "sidebar-link" do %>
+    <span class="icon-holder">
+      <i class="c-blue-500 ti-home"></i>
+    </span>
+    <span class="title"><%= t ".home_page" %></span>
+  <% end %>
+</li>
+<li class="nav-item dropdown">
+  <%= link_to "#", class: "dropdown-toggle" do %>
+    <span class="icon-holder">
+      <i class="c-red-500 fa fa-file-text"></i>
+    </span>
+    <span class="title"><%= t ".list_reports" %></span>
+    <span class="arrow">
+      <i class="ti-angle-right"></i>
+    </span>
+  <% end %>
+  <ul class="dropdown-menu">
+    <li>
+      <%= link_to "", class: "sidebar-link" do %>
+        <span class="icon-holder">
+          <i class="c-pink-400 fa fa-plus"></i>
+        </span>
+        <span class="title"><%= t ".create_report" %></span>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to "", class: "sidebar-link" do %>
+        <span class="icon-holder">
+          <i class="c-pink-400 ti-view-list"></i>
+        </span>
+        <span class="title"><%= t ".show_list_reports" %></span>
+      <% end %>
+    </li>
+  </ul>
+</li>

@@ -14,6 +14,9 @@ Rails.application.routes.draw do
         get "(page/:page)", action: :index, on: :collection
       end
     end
+    namespace :trainee do
+      root "home#index"
+    end
     resources :users, only: %i(show)
     resources :logins, only: %i(create)
   end

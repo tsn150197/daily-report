@@ -82,6 +82,13 @@ en:
         success: User deleted
         danger: User already been delete
         found: User not found!
+  trainee:
+    sidebar:
+      item:
+        home_page: Home page
+        list_reports: List reports
+        create_report: Create report
+        show_list_reports: Show list reports
   views:
     pagination:
       first: "&laquo; First"
