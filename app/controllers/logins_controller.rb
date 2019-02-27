@@ -12,6 +12,11 @@ class LoginsController < ApplicationController
     end
   end
 
+  def destroy
+    log_out
+    redirect_to root_url
+  end
+
   private
 
   def set_cookie_session user
@@ -22,6 +27,6 @@ class LoginsController < ApplicationController
     else
       forget user
     end
-    redirect_back_or root_path
+    redirect_back_or send("#{current_user.type.downcase}_root_path")
   end
 end

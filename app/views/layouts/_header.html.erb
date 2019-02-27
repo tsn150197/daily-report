@@ -83,7 +83,7 @@
           </li>
           <li role="separator" class="divider"></li>
           <li>
-            <%= link_to "", class: "d-b td-n pY-5 bgcH-grey-100 c-grey-700" do %>
+            <%= link_to logout_path, method: :delete, class: "d-b td-n pY-5 bgcH-grey-100 c-grey-700" do %>
               <i class="ti-power-off mR-10"></i>
               <span><%= t ".logout" %></span>
             <% end %>
