@@ -1,9 +1,7 @@
-Admin.create! email: "famaxlevel1997@gmail.com",
+Admin.create! email: "zxc@gmail.com",
   password: "123123", password_confirmation: "123123",
     activated: true, activated_at: Time.zone.now, type: "Admin"
-User.first.create_user_profile name: "Nguyen Van Tuan",
-  avatar_url: "http://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Dave-icon.png",
-    gender: 1
+User.first.create_user_profile name: "Z X C", gender: 1
 Trainer.create! email: "abc1997@gmail.com",
   password: "123123", password_confirmation: "123123",
     activated: true, activated_at: Time.zone.now, type: "Trainer"

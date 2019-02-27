@@ -1,4 +1,5 @@
 vi:
+  login_fail: Vui lòng đăng nhập
   layouts:
     application:
       daily_report: Báo cáo hàng ngày
@@ -99,3 +100,5 @@ vi:
       remember_me: Hãy nhớ tôi trên máy tính này
       forgot: Quên
       password: mật khẩu?
+    create:
+      danger: Email hoặc mật khẩu không hợp lệ

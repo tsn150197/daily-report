@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+  before_action :logged_in_user
   before_action :admin?
   before_action :find_user, only: %i(destroy)
 
@@ -45,10 +46,6 @@ class Admin::UsersController < ApplicationController
     end
     flash[:success] = t ".success"
     redirect_to new_admin_user_path
-  end
-
-  def admin?
-    redirect_to "#" unless current_user.is_a? Admin
   end
 
   def tranfer_data

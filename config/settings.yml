@@ -6,3 +6,4 @@ password_minimum: 6
 user_pagination: 12
 window_pagination: 2
 user_avt_size: 130
+remember_me: "1"
