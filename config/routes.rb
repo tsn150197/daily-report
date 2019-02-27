@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => "/ckeditor"
   scope "(:locale)", locale: /en|vi/ do
     root "logins#new"
     delete "/logout", to: "logins#destroy"
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
     end
     namespace :trainee do
       root "home#index"
+      resources :reports, only: %i(new create)
     end
     resources :users, only: %i(show)
     resources :logins, only: %i(create)

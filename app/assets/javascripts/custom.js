@@ -13,3 +13,5 @@ $(".pagination .page a").addClass("btn cur-p btn-outline-info mR-10");
 $(".pagination .current").addClass("btn cur-p btn-secondary mR-10");
 $(".pagination .gap").addClass("btn cur-p mR-10");
 $(".pagination").addClass("mT-30");
+
+CKEDITOR.config.height = 800;

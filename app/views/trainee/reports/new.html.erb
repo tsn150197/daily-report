@@ -1,0 +1,18 @@
+<% provide :title, t(".create_report") %>
+<% provide :icon, "icons/admin.png" %>
+<div class="masonry-item col-md-12 masonry-sizer">
+  <div class="bd bgc-white">
+    <div class="peers fxw-nw@lg+ ai-s">
+      <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
+        <div class="layers">
+          <div class="layer w-100 mB-10">
+            <h3 class="c-grey-900 mB-20">
+              <%= t ".create_report" %>
+            </h3>
+            <%= render partial: "form_ckeditor", object: @report %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
