@@ -1,4 +1,5 @@
 class LoginsController < ApplicationController
+  before_action :redirect_logged_in, only: %i(new)
   def new; end
 
   def create
@@ -28,5 +29,11 @@ class LoginsController < ApplicationController
       forget user
     end
     redirect_back_or send("#{current_user.type.downcase}_root_path")
+  end
+
+  def redirect_logged_in
+    return unless session[:user_id] || cookies.signed[:user_id]
+    user = User.find_by id: session[:user_id] || cookies.signed[:user_id]
+    redirect_to send("#{user.type.downcase}_root_path")
   end
 end

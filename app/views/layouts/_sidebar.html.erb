@@ -26,11 +26,14 @@
       </div>
     </div>
     <ul class="sidebar-menu scrollable pos-r">
-      <% if current_user.type == "Admin" %>
+      <% if current_user.is_a? Admin %>
         <%= render "admin/sidebar/item" %>
       <% end %>
-      <% if current_user.type == "Trainer" %>
+      <% if current_user.is_a? Trainer %>
         <%= render "trainer/sidebar/item" %>
+      <% end %>
+      <% if current_user.is_a? Trainee %>
+        <%= render "trainee/sidebar/item" %>
       <% end %>
     </ul>
   </div>

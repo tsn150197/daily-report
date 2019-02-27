@@ -26,4 +26,8 @@ class ApplicationController < ActionController::Base
   def trainer?
     redirect_to root_path unless current_user.is_a? Trainer
   end
+
+  def trainee?
+    redirect_to root_path unless current_user.is_a? Trainee
+  end
 end
