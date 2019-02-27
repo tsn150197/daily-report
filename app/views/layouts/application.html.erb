@@ -8,29 +8,42 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbolinks-track": "reload", defer: true %>
+    <% if logged_in? %>
+      <%= stylesheet_link_tag "application", media: "all",
+        "data-turbolinks-track": "reload" %>
+      <%= javascript_include_tag "application",
+        "data-turbolinks-track": "reload", defer: true %>
+    <% else %>
+      <%= stylesheet_link_tag "theme1", media: "all",
+        "data-turbolinks-track": "reload" %>
+      <%= javascript_include_tag "theme1",
+        "data-turbolinks-track": "reload", defer: true %>
+    <% end %>
     <%= render "layouts/shim" %>
   </head>
 
   <body class="app">
-    <div id="loader">
-      <div class="spinner"></div>
-    </div>
-    <div>
-      <%= render "layouts/sidebar" %>
-      <div class="page-container">
-        <%= render "layouts/header" %>
-        <main class="main-content bgc-grey-100">
-          <div id="mainContent">
-            <div class="row gap-20 masonry pos-r main-body">
-              <div class="masonry-sizer col-md-6"></div>
-              <%= yield %>
-            </div>
-          </div>
-        </main>
-        <%= render "layouts/footer" %>
+    <% if logged_in? %>
+      <div id="loader">
+        <div class="spinner"></div>
       </div>
-    </div>
+      <div>
+        <%= render "layouts/sidebar" %>
+        <div class="page-container">
+          <%= render "layouts/header" %>
+          <main class="main-content bgc-grey-100">
+            <div id="mainContent">
+              <div class="row gap-20 masonry pos-r main-body">
+                <div class="masonry-sizer col-md-6"></div>
+                <%= yield %>
+              </div>
+            </div>
+          </main>
+          <%= render "layouts/footer" %>
+        </div>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
   </body>
 </html>

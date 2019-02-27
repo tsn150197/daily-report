@@ -88,3 +88,14 @@ en:
       previous: "&lsaquo; Prev"
       next: "Next &rsaquo;"
       truncate: "&hellip;"
+      permission: Title
+  logins:
+    new:
+      daily_report: Daily report
+      login: Login
+      login_title: Daily Report Login
+      valid_email: "Valid email is required: ex@abc.xyz"
+      valid_password: Password is required
+      remember_me: Remember me on this computer
+      forgot: Forgot
+      password: Password?

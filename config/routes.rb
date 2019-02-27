@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
+    root "logins#new"
     namespace :admin do
       root "home#index"
       resources :users, only: %i(index new create destroy) do
