@@ -1,3 +1,20 @@
+@mixin ckeditor-custom-img($property) {
+  .ckeditor-custom {
+    img {
+      max-width: $property !important;
+      height: auto !important;
+    }
+  }
+}
+
+@media (max-width: 1900px) and (min-width: 1000px) {
+  @include ckeditor-custom-img(900px);
+}
+
+@media (max-width: 1000px) and (min-width: 600px) {
+  @include ckeditor-custom-img(500px);
+}
+
 @media (max-width: 600px) {
   .language {
     display: none;
@@ -8,6 +25,7 @@
   .home-search {
     width: inherit;
   }
+  @include ckeditor-custom-img(300px);
 }
 
 @media (max-width: 400px) {
@@ -30,4 +48,50 @@
     margin-right: auto;
     margin-left: auto;
   }
+}
+
+/*** Custom content CKEditor ***/
+
+.ckeditor-custom {
+  height: 700px;
+  overflow-y: scroll;
+  background: rgba(215, 253, 193, 0.1);
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+  }
+  blockquote {
+    padding-left: 20px;
+    padding-right: 8px;
+    border-left-width: 5px;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding: 2px 0;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 0;
+}
+
+blockquote {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
 }

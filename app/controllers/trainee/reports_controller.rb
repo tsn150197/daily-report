@@ -19,6 +19,16 @@ class Trainee::ReportsController < ApplicationController
     end
   end
 
+  def show
+    @report = current_user.reports.find_by id: params[:id]
+
+    @status = if @report.status == Settings.no_approve
+                t ".no_approve"
+              else
+                t ".yes_approve"
+              end
+  end
+
   def edit
     @report = @report.find_by id: params[:id]
   end
