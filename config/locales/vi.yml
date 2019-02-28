@@ -100,6 +100,17 @@ vi:
       create:
         success: Tạo báo cáo thành công
         danger: Tạo báo cáo thất bại
+      edit:
+        edit_report: Chỉnh sửa báo cáo
+        title: Tiêu đề
+        date: Ngày
+        content: Nội dung
+        create: Tạo
+        confirm: Bạn muốn cập nhật báo cáo này?
+        report_not_found_status: Báo cáo được phê duyệt không thể chỉnh sửa
+      update:
+        success: Cập nhật báo cáo thành công
+        danger: Cập nhật báo cáo thất bại
   views:
     pagination:
       first: "&laquo; Đầu"

@@ -100,6 +100,17 @@ en:
       create:
         success: Create report success
         danger: Create report fail
+      edit:
+        edit_report: Edit report
+        title: Title
+        date: Date
+        content: Content
+        create: Create
+        confirm: You want to update this report?
+        report_not_found_status: Approved reports cannot be edited
+      update:
+        success: Update report success
+        danger: Update report fail
   views:
     pagination:
       first: "&laquo; First"
