@@ -20,5 +20,6 @@ module DailyReport
       'locales', '**', '*.{rb,yml}']
     config.i18n.available_locales = %i(en vi)
     config.i18n.default_locale = :en
+    config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
   end
 end

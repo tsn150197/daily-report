@@ -9,6 +9,9 @@
             <h3 class="c-grey-900 mB-20">
               <%= t ".hi" %>, <i class="c-red-500"><%= @user_profile.name %></i>
             </h3>
+            <% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %> mT-30"><%= message %></div>
+            <% end %>
             <p><%= t ".content1" %></p>
             <%= image_tag "cute.jpg", class: "w-10r bdrs-50p col-md-4" %>
           </div>

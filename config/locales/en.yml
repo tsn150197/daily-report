@@ -89,6 +89,17 @@ en:
         list_reports: List reports
         create_report: Create report
         show_list_reports: Show list reports
+    reports:
+      new:
+        create_report: Create report
+        title: Title
+        date: Date
+        content: Content
+        create: Create
+        confirm: You want to save this report?
+      create:
+        success: Create report success
+        danger: Create report fail
   views:
     pagination:
       first: "&laquo; First"
