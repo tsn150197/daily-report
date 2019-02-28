@@ -1,4 +1,13 @@
 en:
+  activerecord:
+    attributes:
+      report:
+        statuses:
+          rejected: Rejected
+          approved: Approved
+  date:
+    formats:
+      date: "%d/%m/%Y"
   login_fail: Please login
   layouts:
     application:
@@ -100,6 +109,13 @@ en:
       create:
         success: Create report success
         danger: Create report fail
+      show:
+        view_report: View report
+        title: Title
+        date: Date
+        approve: Approve
+        view_content: View content
+        report_not_found: Report not found!
       edit:
         edit_report: Edit report
         title: Title
