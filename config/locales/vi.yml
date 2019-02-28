@@ -82,6 +82,13 @@ vi:
         success: Người dùng đã xoá
         danger: Người dùng đã bị xoá
         found: Không tìm thấy người dùng
+  trainee:
+    sidebar:
+      item:
+        home_page: Trang chủ
+        list_reports: Danh sách báo cáo
+        create_report: Tạo báo cáo
+        show_list_reports: Xem danh sách báo cáo
   views:
     pagination:
       first: "&laquo; Đầu"
