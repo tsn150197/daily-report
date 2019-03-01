@@ -1,42 +1,87 @@
 <% provide :title, t(".view_report") %>
 <% provide :icon, "icons/admin.png" %>
-<div class="masonry-item col-md-12 masonry-sizer">
-  <div class="bd bgc-white">
-    <div class="peers fxw-nw@lg+ ai-s">
-      <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
-        <div class="layers">
-          <div class="layer w-100 mB-10">
-            <h3 class="c-grey-900 mB-20">
-              <%= t ".view_report" %>
-            </h3>
-            <div class="col-md-5 row mT-30 mB-50">
-              <div class="col-md-12 row">
-                <h6 class="c-red-500 mR-30">
-                  <%= t ".title" %>:
-                </h6>
-                <%= @report.title %>
-              </div>
-              <div class="col-md-12 row">
-                <h6 class="c-red-500 mR-30">
-                  <%= t ".date" %>:
-                </h6>
-                <%= l @report.date, format: :date %>
-              </div>
-              <div class="col-md-12 row">
-                <h6 class="c-red-500 mR-30">
-                  <%= t ".approve" %>:
-                </h6>
-                <span class="c-red-500">
-                  <%= @status %>
-                </span>
-              </div>
+<div class="masonry-item col-md-3">
+  <div class="bgc-orange-300 ta-c p-10">
+    <h3 class="fw-300 mB-5 lh-1 c-white">
+      <%= t ".report_info" %>
+    </h3>
+  </div>
+  <div class="bd bgc-white p-20">
+    <div class="layers">
+      <div class="layer w-100 mB-10">
+        <div class="col-md-12 row mT-30 mB-20">
+          <div class="col-md-12 row">
+            <h6 class="c-red-500 mR-30">
+              <%= t ".title" %>:
+            </h6>
+            <%= @report.title %>
+          </div>
+          <div class="col-md-12 row">
+            <h6 class="c-red-500 mR-30">
+              <%= t ".date" %>:
+            </h6>
+            <%= l @report.date, format: :date %>
+          </div>
+          <div class="col-md-12 row">
+            <h6 class="c-red-500 mR-30">
+              <%= t ".approve" %>:
+            </h6>
+            <span class="c-red-500">
+              <%= @status %>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="masonry-item col-md-9">
+  <div class="bgc-green-300 ta-c p-20">
+    <h3 class="fw-300 mB-5 lh-1 c-white">
+      <%= t ".view_content" %>
+    </h3>
+  </div>
+  <div class="bd bgc-white p-20">
+    <div class="layers">
+      <div class="layer w-100 mB-10">
+        <div class="row">
+          <div class="ckeditor-custom col-md-12">
+            <%= raw @report.content %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="masonry-item col-md-3">
+  <div class="bgc-blue-300 ta-c p-10">
+    <h3 class="fw-300 mB-5 lh-1 c-white">
+      <%= t ".view_comment" %>
+    </h3>
+  </div>
+  <div class="bd bgc-white p-20">
+    <div class="layers">
+      <div class="layer w-100 mB-10">
+        <div class="row">
+          <div class="col-md-12 commet-report">
+            <div class="col-md-12 mB-30" id="comments"
+              data-report-id="<%= @report.id %>">
+              <%= render partial: "comments/comment",
+                collection: @report.comments %>
             </div>
-            <div class="text-center mB-30">
-              <h3><%= t ".view_content" %></h3>
-            </div>
-            <div class="ckeditor-custom col-md-8 offset-md-2">
-              <%= raw @report.content %>
-            </div>
+            <div id="comment-bottom"></div>
+          </div>
+          <div class="col-md-12">
+            <%= form_for @comment, url: "#" do |f| %>
+              <div class="p-20 bdT">
+                <div class="pos-r">
+                  <%= f.text_area :content, rows: 5,
+                    class: "form-control bdrs-20em mB-20",
+                    placeholder: t(".comment_st") %>
+                  <%= f.button t(".comment"), class: "btn btn-primary btn-comment" %>
+                </div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>

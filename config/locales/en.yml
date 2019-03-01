@@ -8,6 +8,9 @@ en:
   date:
     formats:
       date: "%d/%m/%Y"
+  time:
+    formats:
+      datetime: "%H:%M:%S %d/%m/%y"
   login_fail: Please login
   layouts:
     application:
@@ -30,6 +33,9 @@ en:
     error_messages:
       content1: The form contains
       content2: error
+  comments:
+    comment:
+      comment_at: comment at
   admin:
     sidebar:
       item:
@@ -116,6 +122,10 @@ en:
         approve: Approve
         view_content: View content
         report_not_found: Report not found!
+        report_info: Report information
+        view_comment: View comment
+        comment: Comment
+        comment_st: Comment something ^^...
       edit:
         edit_report: Edit report
         title: Title

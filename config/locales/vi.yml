@@ -8,6 +8,9 @@ vi:
   date:
     formats:
       date: "%d/%m/%Y"
+  time:
+    formats:
+      datetime: "%H:%M:%S %d/%m/%y"
   login_fail: Vui lòng đăng nhập
   layouts:
     application:
@@ -30,6 +33,9 @@ vi:
     error_messages:
       content1: Biểu mẫu có chứa
       content2: lỗi
+  comments:
+    comment:
+      comment_at: bình luận lúc
   admin:
     sidebar:
       item:
@@ -116,6 +122,10 @@ vi:
         approve: Phê duyệt
         view_content: Xem nội dung
         report_not_found: Không tìm thấy báo cáo!
+        report_info: Thông tin báo cáo
+        view_comment: Xem bình luận
+        comment: Bình luận
+        comment_st: Bình luận gì đó đi ^^...
       edit:
         edit_report: Chỉnh sửa báo cáo
         title: Tiêu đề
