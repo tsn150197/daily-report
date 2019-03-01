@@ -1,7 +1,7 @@
 class Trainee::ReportsController < ApplicationController
   before_action :logged_in_user
   before_action :trainee?
-  before_action :check_status, only: %i(edit update)
+  before_action :check_report, only: %i(show edit update)
 
   def new
     @report = current_user.reports.build
@@ -19,8 +19,14 @@ class Trainee::ReportsController < ApplicationController
     end
   end
 
+  def show
+    @status = Report.human_enum_name(:status, :"#{@report.status}")
+  end
+
   def edit
-    @report = @report.find_by id: params[:id]
+    return if @report.status == "rejected"
+    flash[:danger] = t ".report_not_found_status"
+    redirect_to trainee_root_path
   end
 
   def update
@@ -39,9 +45,9 @@ class Trainee::ReportsController < ApplicationController
     params.require(:report).permit :title, :date, :content, :status
   end
 
-  def check_status
-    return if (@report = current_user.reports.where status: 0)
-    flash[:danger] = t ".report_not_found_status"
+  def check_report
+    return if (@report = current_user.reports.find_by id: params[:id])
+    flash[:danger] = t ".report_not_found"
     redirect_to trainee_root_path
   end
 end
