@@ -5,6 +5,10 @@ en:
         statuses:
           rejected: Rejected
           approved: Approved
+      user_profile:
+        genders:
+          male: Male
+          female: Female
   date:
     formats:
       date: "%d/%m/%Y"
@@ -33,6 +37,13 @@ en:
     error_messages:
       content1: The form contains
       content2: error
+    profile:
+      user_profile: User profile
+      name: Name
+      gender: Gender
+      birthday: Birthday
+      address: Address
+      phone: Phone
   comments:
     comment:
       comment_at: comment at

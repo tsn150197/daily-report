@@ -5,6 +5,10 @@ vi:
         statuses:
           rejected: Từ chối
           approved: Đã duyệt
+      user_profile:
+        genders:
+          male: Nam
+          female: Nữ
   date:
     formats:
       date: "%d/%m/%Y"
@@ -33,6 +37,13 @@ vi:
     error_messages:
       content1: Biểu mẫu có chứa
       content2: lỗi
+    profile:
+      user_profile: Hồ sơ người dùng
+      name: Tên
+      gender: Giới tính
+      birthday: Ngày sinh
+      address: Địa chỉ
+      phone: Số điện thoại
   comments:
     comment:
       comment_at: bình luận lúc

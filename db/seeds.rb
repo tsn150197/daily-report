@@ -5,7 +5,8 @@ User.first.create_user_profile name: "Admin TEST", gender: 1
 Trainer.create! email: "trainer@gmail.com",
   password: "123123", password_confirmation: "123123",
     activated: true, activated_at: Time.zone.now
-Trainer.first.create_user_profile name: "TraineR TEST", gender: 1
+Trainer.first.create_user_profile name: "TraineR TEST", gender: 1,
+  birthday: "22-09-2015", address: "Hiệp Hòa - Bắc Giang", phone: "0963097932"
 Trainee.create! email: "trainee@gmail.com",
   password: "123123", password_confirmation: "123123",
     activated: true, activated_at: Time.zone.now

@@ -1,0 +1,25 @@
+<div class="col-md-3 user mB-30">
+  <div data-toggle="modal" data-target="#exampleModal-<%= user.user_profile.id %>"
+    class="nav-link c-grey-800 cH-green-500 row text-center">
+    <div class="row">
+      <% if user.user_profile.avatar_url %>
+        <%= image_tag user.user_profile.avatar_url ,
+          size: Settings.user_avt_size %>
+      <% else %>
+        <%= image_tag "default_avatar.png", size: Settings.user_avt_size %>
+      <% end %>
+    </div>
+    <h5>
+      <%= user.user_profile.name %>
+    </h5>
+  </div>
+  <% @profile = user.user_profile %>
+  <%= render "shared/profile", object: @profile %>
+  <div class="row text-center">
+    <span class="icon-holder">
+      <i class="c-red-500 fa fa-times"></i>
+    </span>
+    <%= link_to t(".delete"), admin_user_path(user), method: :delete,
+      data: {confirm: t(".message_delete")}, class: "c-red-500" %>
+  </div>
+</div>
