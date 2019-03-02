@@ -21,6 +21,7 @@ class Trainee::ReportsController < ApplicationController
 
   def show
     @status = Report.human_enum_name(:status, :"#{@report.status}")
+    @comment = Comment.new
   end
 
   def edit

@@ -1,0 +1,14 @@
+<div class="mB-20">
+  <div class="text-muted row">
+    <span class="c-red-400">
+      <%= comment.user.user_profile.name %>
+    </span>
+    <i class="fc-day-number">
+      <%= t ".comment_at" %> <%= l comment.created_at, format: :datetime %>
+    </i>
+  </div>
+  <div class="row peers fxw-nw ai-c pY-3 pX-10
+    bgc-green-50 bdrs-2 lh-3/2 comment-content">
+    <%= comment.content %>
+  </div>
+</div>

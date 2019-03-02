@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 1900px) and (min-width: 1000px) {
-  @include ckeditor-custom-img(900px);
+  @include ckeditor-custom-img(700px);
 }
 
 @media (max-width: 1000px) and (min-width: 600px) {
@@ -25,7 +25,7 @@
   .home-search {
     width: inherit;
   }
-  @include ckeditor-custom-img(300px);
+  @include ckeditor-custom-img(260px);
 }
 
 @media (max-width: 400px) {
@@ -50,12 +50,13 @@
   }
 }
 
-/*** Custom content CKEditor ***/
+/*** Custom content CKEditor, Comment ***/
 
-.ckeditor-custom {
-  height: 700px;
+.ckeditor-custom,
+.commet-report {
+  height: 1100px;
   overflow-y: scroll;
-  background: rgba(215, 253, 193, 0.1);
+  overflow-x: hidden;
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -63,7 +64,7 @@
     background-color: #F5F5F5;
   }
   &::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
     background-color: #F5F5F5;
   }
   &::-webkit-scrollbar-thumb {
@@ -94,4 +95,12 @@ blockquote {
   margin-block-end: 1em;
   margin-inline-start: 40px;
   margin-inline-end: 40px;
+}
+
+.commet-report {
+  height: 650px;
+}
+
+.comment-content {
+  word-break: break-all;
 }

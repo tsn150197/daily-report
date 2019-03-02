@@ -12,6 +12,7 @@ class User < ApplicationRecord
   validates :password, length: {minimum: Settings.password_minimum},
     allow_nil: true
   has_secure_password
+  scope :verified_user, ->(param1, param2){find_by id: [param1, param2]}
 
   class << self
     def digest string

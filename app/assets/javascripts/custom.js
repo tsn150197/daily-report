@@ -1,8 +1,10 @@
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
   setTimeout(() => {
-    loader.classList.add('fadeOut');
+    loader.classList.add("fadeOut");
   }, 300);
+  var mydiv = $(".commet-report");
+  mydiv.scrollTop(mydiv.prop("scrollHeight"));
 });
 
 $(".pagination .first a").addClass("btn cur-p btn-primary mR-10");

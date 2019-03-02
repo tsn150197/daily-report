@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => "/cable"
   mount Ckeditor::Engine => "/ckeditor"
   scope "(:locale)", locale: /en|vi/ do
     root "logins#new"

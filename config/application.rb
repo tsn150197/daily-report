@@ -21,5 +21,7 @@ module DailyReport
     config.i18n.available_locales = %i(en vi)
     config.i18n.default_locale = :en
     config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
+    config.active_record.default_timezone = :local
+    config.time_zone = ActiveSupport::TimeZone[Time.now.strftime('%z').gsub('0', '').to_i]
   end
 end
