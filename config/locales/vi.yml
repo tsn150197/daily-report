@@ -116,6 +116,31 @@ vi:
         success: Người dùng đã xoá
         danger: Người dùng đã bị xoá
         found: Không tìm thấy người dùng
+    reports:
+      report:
+        title: Tiêu đề
+        date: Ngày
+        approve: Phê duyệt
+        view: Xem
+        delete: Xóa
+        message_delete: Bạn có muốn xóa báo cáo này?
+      index:
+        list_reports: Danh sách báo cáo
+      show:
+        view_report: Xem báo cáo
+        title: Tiêu đề
+        date: Ngày
+        approve: Phê duyệt
+        view_content: Xem nội dung
+        report_not_found: Không tìm thấy báo cáo!
+        report_info: Thông tin báo cáo
+        view_comment: Xem bình luận
+        comment: Bình luận
+        comment_st: Bình luận gì đó đi ^^...
+      destroy:
+        success: Báo cáo đã được xóa
+        danger: Không thể xóa báo cáo!
+        report_not_found: Không tìm thấy báo cáo!
   trainee:
     sidebar:
       item:
