@@ -58,8 +58,8 @@
         <%= link_to "", class: "dropdown-toggle no-after peers fxw-nw ai-c lh-1",
           "data-toggle": "dropdown" do %>
           <div class="peer mR-10">
-            <% if current_user.user_profile.avatar_url %>
-              <%= image_tag current_user.user_profile.avatar_url , class: "w-2r bdrs-50p" %>
+            <% if current_user.user_profile.avatar_url? %>
+              <%= image_tag current_user.user_profile.avatar_url.url , class: "w-2r bdrs-50p" %>
             <% else %>
               <%= image_tag "default_avatar.png", class: "w-2r bdrs-50p" %>
             <% end %>

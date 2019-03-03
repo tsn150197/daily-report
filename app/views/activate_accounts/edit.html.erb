@@ -1,0 +1,54 @@
+<% provide :title, t(".activate_title") %>
+<% provide :icon, "icons/login.ico" %>
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt" data-tilt>
+        <%= image_tag "activate.png", alt: "IMG" %>
+      </div>
+      <%= form_with url: "#", model: @user, method: :put, local: true,
+        class: "login100-form validate-form" do |form| %>
+        <span class="login100-form-title">
+          <%= t ".title" %>
+        </span>
+        <div class="wrap-input100">
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %> mT-30"><%= message %></div>
+          <% end %>
+        </div>
+        <div class="wrap-input100 validate-input"
+          data-validate="Password is required">
+          <%= form.password_field :password_current, class: :input100,
+            placeholder: t(".password_current") %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="wrap-input100 validate-input"
+          data-validate="Password is required">
+          <%= form.password_field :password, class: :input100,
+            placeholder: t(".password") %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="wrap-input100 validate-input"
+          data-validate="Password is required">
+          <%= form.password_field :password_confirmation, class: :input100,
+            placeholder: t(".password_confirm") %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="container-login100-form-btn">
+          <%= form.submit t(".activate"), class: "login100-form-btn" %>
+        </div>
+        <div class="p-t-150">
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

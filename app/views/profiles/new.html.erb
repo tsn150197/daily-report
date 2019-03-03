@@ -1,0 +1,92 @@
+<% provide :title, t(".create_profile") %>
+<% provide :icon, "icons/login.ico" %>
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt p-t-140" data-tilt>
+        <%= image_tag "activate.png", alt: "IMG" %>
+      </div>
+      <%= form_with url: user_profiles_path, model: @profile, local: true,
+        class: "login100-form validate-form" do |form| %>
+        <span class="login100-form-title">
+          <%= t ".create_profile" %>
+        </span>
+        <div class="wrap-input100">
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %> mT-30"><%= message %></div>
+          <% end %>
+          <%= render "shared/error_messages", object: form.object %>
+        </div>
+        <div class="wrap-input100">
+          <%= form.text_field :name, class: :input100,
+            placeholder: t(".name") %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="wrap-input100 p-l-20">
+          <div>
+            <%= form.label t(".gender") %>
+          </div>
+          <div class="p-l-70">
+            <span>
+              <%= form.radio_button :gender, "male", checked: true %>
+              <%= label :gender, t(".male") %>
+            </span>
+            <span class="p-l-50">
+              <%= form.radio_button :gender, "female" %>
+              <%= label :gender, t(".female") %>
+            <span>
+          </div>
+        </div>
+        <div class="wrap-input100 p-b-10 p-l-20">
+          <div>
+            <%= form.label t(".avatar") %>
+          </div>
+          <div class="p-l-70">
+            <%= form.file_field :avatar_url,
+              accept: "image/jpeg, image/jpg, image/png" %>
+          </div>
+        </div>
+        <div class="wrap-input100">
+          <%= form.date_field :birthday, class: :input100 %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="wrap-input100">
+          <%= form.text_field :address, class: :input100,
+            placeholder: t(".address") %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-map-pin" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="wrap-input100">
+          <%= form.text_field :phone, class: :input100,
+            placeholder: t(".phone") %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="wrap-input100 validate-input"
+          data-validate="Password is required">
+          <%= form.password_field :password, class: :input100,
+            placeholder: t(".current_password") %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="container-login100-form-btn">
+          <%= form.submit t(".save"), class: "login100-form-btn" %>
+        </div>
+        <div class="p-t-150">
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

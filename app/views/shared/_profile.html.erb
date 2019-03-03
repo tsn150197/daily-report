@@ -12,9 +12,8 @@
       </div>
       <div class="modal-body" style="word-break: break-all;">
         <div class="text-center">
-          <% if @profile.avatar_url %>
-          <%= image_tag @profile.avatar_url ,
-            size: Settings.user_avt_size %>
+          <% if @profile.avatar_url? %>
+            <%= image_tag @profile.avatar_url.url , size: Settings.user_avt_size %>
           <% else %>
             <%= image_tag "default_avatar.png", size: Settings.user_avt_size %>
           <% end %>
