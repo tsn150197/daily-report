@@ -1,0 +1,49 @@
+<div class="modal fade" id="exampleModal-<%= @profile.id %>"
+  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">
+          <%= t ".user_profile" %>
+        </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i aria-hidden="true" class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="word-break: break-all;">
+        <div class="text-center">
+          <% if @profile.avatar_url %>
+          <%= image_tag @profile.avatar_url ,
+            size: Settings.user_avt_size %>
+          <% else %>
+            <%= image_tag "default_avatar.png", size: Settings.user_avt_size %>
+          <% end %>
+        </div>
+        <h5 class="row mT-50">
+          <%= t ".name" %>:
+          <%= @profile.name %>
+        </h5>
+        <h5 class="row">
+          <%= t ".gender" %>:
+          <% if @profile.gender? %>
+            <%= UserProfile.human_enum_name(:gender, :"#{@profile.gender}")%>
+          <% end %>
+        </h5>
+        <h5 class="row">
+          <%= t ".birthday" %>:
+          <% if @profile.birthday? %>
+            <%= l @profile.birthday, format: :date %>
+          <% end %>
+        </h5>
+        <h5 class="row">
+          <%= t ".address" %>:
+          <%= @profile.address %>
+        </h5>
+        <h5 class="row">
+          <%= t ".phone" %>:
+          <%= @profile.phone %>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>

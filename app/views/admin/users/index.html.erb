@@ -14,7 +14,7 @@
             <% end %>
             <div class="row mT-30">
               <div class="col-lg-12 row mL-5">
-                <%= render partial: "user", collection: @users %>
+                <%= render partial: "shared/user", collection: @users %>
               </div>
               <%= paginate @users, window: Settings.window_pagination %>
             </div>

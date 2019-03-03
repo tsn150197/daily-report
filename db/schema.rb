@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_080213) do
+ActiveRecord::Schema.define(version: 2019_03_02_140531) do
 
   create_table "ckeditor_assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "data_file_name", null: false
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2019_02_28_080213) do
   create_table "user_profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "avatar_url"
-    t.boolean "gender"
+    t.integer "gender"
     t.date "birthday"
     t.string "address"
     t.string "phone"

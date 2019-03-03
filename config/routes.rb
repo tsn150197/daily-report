@@ -20,7 +20,6 @@ Rails.application.routes.draw do
       root "home#index"
       resources :reports, only: %i(new create show edit update)
     end
-    resources :users, only: %i(show)
     resources :logins, only: %i(create)
   end
 end
