@@ -126,6 +126,11 @@ vi:
     reports:
       index:
         list_report: Danh sách báo cáo
+        title: Tiêu đề
+        approve: Phê duyệt
+        from_to: Từ ngày
+        to_date: Đến ngày
+        filter: Lọc
       new:
         create_report: Tạo báo cáo
         title: Tiêu đề
