@@ -33,7 +33,7 @@
       <span class="icon-holder">
         <i class="c-red-500 fa fa-times"></i>
       </span>
-      <%= link_to t(".delete"), "#", method: :delete,
+      <%= link_to t(".delete"), trainee_report_path(report.id), method: :delete,
         data: {confirm: t(".message_delete")}, class: "c-red-500" %>
     </span>
   </div>
