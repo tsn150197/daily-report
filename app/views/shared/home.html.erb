@@ -7,7 +7,8 @@
         <div class="layers">
           <div class="layer w-100 mB-10">
             <h3 class="c-grey-900 mB-20">
-              <%= t ".hi" %>, <i class="c-red-500"><%= @user_profile.name %></i>
+              <%= t ".hi" %>,
+              <i class="c-red-500"><%= current_user.user_profile.name %></i>
             </h3>
             <% flash.each do |message_type, message| %>
               <div class="alert alert-<%= message_type %> mT-30"><%= message %></div>

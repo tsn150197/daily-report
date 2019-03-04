@@ -21,6 +21,18 @@ class LoginsController < ApplicationController
   private
 
   def set_cookie_session user
+    if user.activated? && user.user_profile
+      set_success user
+    elsif !user.activated?
+      flash[:warning] = t ".warning_activate"
+      redirect_to activate_path(user)
+    else
+      flash[:warning] = t ".warning_profile"
+      redirect_to new_user_profile_path(user)
+    end
+  end
+
+  def set_success user
     log_in user
 
     if params[:remember_me] == Settings.remember_me

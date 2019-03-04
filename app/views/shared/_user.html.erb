@@ -2,8 +2,8 @@
   <div data-toggle="modal" data-target="#exampleModal-<%= user.user_profile.id %>"
     class="nav-link c-grey-800 cH-green-500 row text-center">
     <div class="row">
-      <% if user.user_profile.avatar_url %>
-        <%= image_tag user.user_profile.avatar_url ,
+      <% if user.user_profile.avatar_url? %>
+        <%= image_tag user.user_profile.avatar_url.url ,
           size: Settings.user_avt_size %>
       <% else %>
         <%= image_tag "default_avatar.png", size: Settings.user_avt_size %>

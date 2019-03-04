@@ -168,3 +168,33 @@ vi:
       password: mật khẩu?
     create:
       danger: Email hoặc mật khẩu không hợp lệ
+      warning_activate: Vui lòng cập nhật mật khẩu mới và kích hoạt tài khoản
+      warning_profile: Vui lòng cập nhật hồ sơ
+  activate_accounts:
+    edit:
+      activate_title: Kích hoạt tài khoản
+      title: Đổi mật khẩu và kích họat tài khoản
+      password: Mật khẩu
+      password_confirm: Xác nhận mật khẩu
+      activate: Kích hoạt
+      password_current: Mật khẩu hiện tại
+    update:
+      success: Kích hoạt thành công. Vui lòng cập nhật thông tin cá nhân
+      danger: Mật khẩu hiện tại không đúng
+      warning: Mật khẩu hiện tại và mật khẩu mới không được trùng nhau.
+  profiles:
+    new:
+      create_profile: Tạo hồ sơ
+      name: Tên
+      gender: Giới tính
+      male: Name
+      female: Nữ
+      avatar: Hình đại diện
+      address: Địa chỉ
+      phone: Điện thoại
+      current_password: Mật khẩu hiện tại
+      save: Lưu
+    create:
+      success: Cập nhật hồ sơ thành công
+      danger: Mật khẩu hiện tại không chính xác
+      user_not_found: Không tìm thấy người dùng

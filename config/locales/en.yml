@@ -168,3 +168,33 @@ en:
       password: Password?
     create:
       danger: Invalid email/password combination
+      warning_activate: Please update password and activate account
+      warning_profile: Please create your profile
+  activate_accounts:
+    edit:
+      activate_title: Activate account
+      title: Change password and activate account
+      password: Password
+      password_confirm: Password confirmation
+      activate: Activate
+      password_current: Current password
+    update:
+      success: Activate successful. Please update user profile
+      danger: Current password is not correct
+      warning: Current password and new password cannot be the same
+  profiles:
+    new:
+      create_profile: Create profile
+      name: Name
+      gender: Gender
+      male: Male
+      female: Female
+      avatar: Avatar
+      address: Address
+      phone: Phone
+      current_password: Current password
+      save: Save
+    create:
+      success: Update profile successfully
+      danger: Incorrect current password
+      user_not_found: User not found

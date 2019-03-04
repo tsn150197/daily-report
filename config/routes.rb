@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   mount ActionCable.server => "/cable"
   mount Ckeditor::Engine => "/ckeditor"
   scope "(:locale)", locale: /en|vi/ do
+    get "activate/:id", to: "activate_accounts#edit", as: :activate
+    put "activate/:id", to: "activate_accounts#update"
     root "logins#new"
     delete "/logout", to: "logins#destroy"
     namespace :admin do
@@ -21,5 +23,8 @@ Rails.application.routes.draw do
       resources :reports, only: %i(new create show edit update)
     end
     resources :logins, only: %i(create)
+    resources :users do
+      resources :profiles, only: %i(new create)
+    end
   end
 end
