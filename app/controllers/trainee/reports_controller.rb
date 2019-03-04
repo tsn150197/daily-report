@@ -3,6 +3,11 @@ class Trainee::ReportsController < ApplicationController
   before_action :trainee?
   before_action :check_report, only: %i(show edit update)
 
+  def index
+    @reports = current_user.reports.page(params[:page])
+                           .per Settings.user_pagination
+  end
+
   def new
     @report = current_user.reports.build
   end
@@ -49,6 +54,6 @@ class Trainee::ReportsController < ApplicationController
   def check_report
     return if (@report = current_user.reports.find_by id: params[:id])
     flash[:danger] = t ".report_not_found"
-    redirect_to trainee_root_path
+    redirect_to trainee_reports_path
   end
 end

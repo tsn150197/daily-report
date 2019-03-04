@@ -44,6 +44,14 @@ vi:
       birthday: Ngày sinh
       address: Địa chỉ
       phone: Số điện thoại
+    report:
+      title: Tiều đề
+      date: Ngày
+      approve: Phê duyệt
+      view: Xem
+      edit: Chỉnh sửa
+      delete: Xóa
+      message_delete: Bạn có muốn xóa báo cáo này?
   comments:
     comment:
       comment_at: bình luận lúc
@@ -116,6 +124,8 @@ vi:
         create_report: Tạo báo cáo
         show_list_reports: Xem danh sách báo cáo
     reports:
+      index:
+        list_report: Danh sách báo cáo
       new:
         create_report: Tạo báo cáo
         title: Tiêu đề

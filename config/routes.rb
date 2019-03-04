@@ -20,7 +20,9 @@ Rails.application.routes.draw do
     end
     namespace :trainee do
       root "home#index"
-      resources :reports, only: %i(new create show edit update)
+      resources :reports do
+        get "(page/:page)", action: :index, on: :collection
+      end
     end
     resources :logins, only: %i(create)
     resources :users do

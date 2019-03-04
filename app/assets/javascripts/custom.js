@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
   }, 300);
   var mydiv = $(".commet-report");
   mydiv.scrollTop(mydiv.prop("scrollHeight"));
+  $(".image-report img").addClass("size-img-report");
 });
 
 $(".pagination .first a").addClass("btn cur-p btn-primary mR-10");
