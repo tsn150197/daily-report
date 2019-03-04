@@ -158,6 +158,10 @@ vi:
       update:
         success: Cập nhật báo cáo thành công
         danger: Cập nhật báo cáo thất bại
+      destroy:
+        delete_success: Xóa báo cáo thành công
+        delete_danger: Không thể xóa báo cáo!
+        report_not_found: Không tìm thấy báo cáo!
   views:
     pagination:
       first: "&laquo; Đầu"

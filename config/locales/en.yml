@@ -158,6 +158,10 @@ en:
       update:
         success: Update report success
         danger: Update report fail
+      destroy:
+        delete_success: Delete report successful
+        delete_danger: Cannot delete report!
+        report_not_found: Report not found!
   views:
     pagination:
       first: "&laquo; First"

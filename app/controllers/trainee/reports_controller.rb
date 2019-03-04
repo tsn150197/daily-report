@@ -1,7 +1,7 @@
 class Trainee::ReportsController < ApplicationController
   before_action :logged_in_user
   before_action :trainee?
-  before_action :check_report, only: %i(show edit update)
+  before_action :check_report, only: %i(show edit update destroy)
 
   def index
     @reports = current_user.reports.page(params[:page])
@@ -43,6 +43,15 @@ class Trainee::ReportsController < ApplicationController
       flash[:danger] = t ".danger"
       render :edit
     end
+  end
+
+  def destroy
+    if @report&.destroy
+      flash[:success] = t ".delete_success"
+    else
+      flash[:danger] = t ".delete_danger"
+    end
+    redirect_to trainee_reports_path
   end
 
   private
