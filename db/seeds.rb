@@ -33,3 +33,10 @@ end
       activated_at: Time.zone.now
   user.create_user_profile name: name
 end
+
+Trainer.first.user_team Team.find_by(name: "ruby")
+Trainee.first.user_team Team.find_by(name: "ruby")
+(1..50).each do |n|
+  Trainee.first.reports.create title: "Team ruby test #{n}", date: "2019-02-28",
+    content: "<h3>TEST</h3>"
+end
