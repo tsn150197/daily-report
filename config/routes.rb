@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       resources :reports do
         get "(page/:page)", action: :index, on: :collection
       end
+      resources :filter_reports, only: %i(create)
     end
     resources :logins, only: %i(create)
     resources :users do

@@ -4,6 +4,10 @@ class Trainee::ReportsController < ApplicationController
   before_action :check_report, only: %i(show edit update destroy)
 
   def index
+    @status = [nil]
+    Report.statuses.keys.each do |status|
+      @status << Report.human_enum_name(:status, :"#{status}")
+    end
     @reports = current_user.reports.page(params[:page])
                            .per Settings.user_pagination
   end

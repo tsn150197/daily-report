@@ -126,6 +126,11 @@ en:
     reports:
       index:
         list_report: List report
+        title: Title
+        approve: Approve
+        from_to: From to
+        to_date: To date
+        filter: Filter
       new:
         create_report: Create report
         title: Title
