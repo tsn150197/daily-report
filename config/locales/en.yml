@@ -116,6 +116,31 @@ en:
         success: User deleted
         danger: User already been delete
         found: User not found!
+    reports:
+      report:
+        title: Title
+        date: Date
+        approve: Aprove
+        view: View
+        delete: Delete
+        message_delete: Do you want to delete this report?
+      index:
+        list_reports: List report
+      show:
+        view_report: View report
+        title: Title
+        date: Date
+        approve: Approve
+        view_content: View content
+        report_not_found: Report not found!
+        report_info: Report information
+        view_comment: View comment
+        comment: Comment
+        comment_st: Comment something ^^...
+      destroy:
+        success: Report deleted
+        danger: Cannot delete report!
+        report_not_found: Report not found!
   trainee:
     sidebar:
       item:

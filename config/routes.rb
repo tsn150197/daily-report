@@ -17,6 +17,9 @@ Rails.application.routes.draw do
       resources :users, only: %i(index new create destroy) do
         get "(page/:page)", action: :index, on: :collection
       end
+      resources :reports, only: %i(index show destroy) do
+        get "(page/:page)", action: :index, on: :collection
+      end
     end
     namespace :trainee do
       root "home#index"
