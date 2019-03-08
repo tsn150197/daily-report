@@ -1,9 +1,10 @@
 /*
+ *= require font-awesome
  *= require LoginForm1byColorlib/bootstrap/css/bootstrap.min
  *= require LoginForm1byColorlib/animate/animate
  *= require LoginForm1byColorlib/css-hamburgers/hamburgers.min
- *= require LoginForm1byColorlib/fonts/font-awesome-4.7.0/css/font-awesome.min
  *= require LoginForm1byColorlib/css/main
  *= require LoginForm1byColorlib/css/util
  *= require_self
+ *= require theme1_custom
  */

@@ -1,7 +1,6 @@
 //= require AdminatorByColorlib/vendor
 //= require AdminatorByColorlib/bundle
 //= require jquery
-//= require jquery_ujs
 //= require rails-ujs
 //= require ckeditor/init
 //= require activestorage

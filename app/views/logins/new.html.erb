@@ -2,13 +2,13 @@
 <%= provide :icon, "icons/login.ico" %>
 <div class="limiter">
   <div class="container-login100">
-    <div class="wrap-login100">
+    <div class="wrap-login100 login-custom">
       <div class="login100-pic js-tilt" data-tilt>
         <%= image_tag "img-01.png", alt: "IMG" %>
       </div>
       <%= form_with url: logins_path, class: "login100-form validate-form", local: true do |form| %>
         <span class="login100-form-title">
-          <%= t".login_title" %>
+          <%= t ".login_title" %>
         </span>
         <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
@@ -45,7 +45,6 @@
           </span>
           <%= link_to t(".password"), "#", class: :txt2 %>
         </div>
-        <div class="text-center p-t-136"></div>
       <% end %>
     </div>
   </div>
