@@ -149,6 +149,14 @@ vi:
         create_report: Tạo báo cáo
         show_list_reports: Xem danh sách báo cáo
     reports:
+      report:
+        title: Tiêu đề
+        date: Ngày
+        approve: Phê duyệt
+        view: Xem
+        edit: Sửa
+        delete: Xóa
+        message_delete: Bạn muốn xóa báo cáo có tiêu đề là %{title}?
       index:
         list_report: Danh sách báo cáo
         title: Tiêu đề

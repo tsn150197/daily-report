@@ -1,0 +1,4 @@
+<span class="last mR-10">
+  <%= link_to_unless current_page.last?, t("views.pagination.last").html_safe,
+    url, remote: remote, class: "btn cur-p btn-primary" %>
+</span>

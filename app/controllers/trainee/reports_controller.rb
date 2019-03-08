@@ -8,7 +8,7 @@ class Trainee::ReportsController < ApplicationController
     Report.statuses.keys.each do |status|
       @status << Report.human_enum_name(:status, :"#{status}")
     end
-    @reports = current_user.reports.page(params[:page])
+    @reports = current_user.reports.order_date.page(params[:page])
                            .per Settings.user_pagination
   end
 

@@ -1,0 +1,4 @@
+<span class="next mR-10">
+  <%= link_to_unless current_page.last?, t("views.pagination.next").html_safe,
+    url, rel: "next", remote: remote, class: "btn cur-p btn-info" %>
+</span>

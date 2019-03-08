@@ -23,10 +23,8 @@ Rails.application.routes.draw do
     end
     namespace :trainee do
       root "home#index"
-      resources :reports do
-        get "(page/:page)", action: :index, on: :collection
-      end
-      resources :filter_reports, only: %i(create)
+      resources :reports
+      resources :filter_reports, only: %i(index)
     end
     resources :logins, only: %i(create)
     resources :users do

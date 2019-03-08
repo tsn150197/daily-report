@@ -2,5 +2,5 @@ $("#trainee-reports").html("<%= j render partial: "trainee/reports/report",
   collection: @reports %>").fadeOut(100, function() {
     $("#trainee-reports").fadeIn(100);
   });
-$("#paginate-reports").html("");
 $(".image-report img").addClass("size-img-report");
+$("#paginate-reports").html("<%= j paginate(@reports, remote: true) %>");

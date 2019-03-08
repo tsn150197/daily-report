@@ -10,7 +10,7 @@
               <%= t ".list_report" %>
             </h3>
             <div class="row bgc-grey-200">
-              <%= form_with url: trainee_filter_reports_path,
+              <%= form_with url: trainee_filter_reports_path, method: :get,
                 class: "col-md-12" do |f| %>
                 <div class="row p-10 col-md-12">
                   <div class="mr-30 col-md-1"></div>
@@ -53,7 +53,8 @@
                 <%= render partial: "report", collection: @reports %>
               </div>
               <div class="row col-md-12" id="paginate-reports">
-                <%= paginate @reports, window: Settings.window_pagination %>
+                <%= paginate @reports, window: Settings.window_pagination,
+                remote: true %>
               </div>
             </div>
           </div>

@@ -2,9 +2,11 @@
 <% provide :icon, "icons/login.ico" %>
 <div class="limiter">
   <div class="container-login100">
-    <div class="wrap-login100">
-      <div class="login100-pic js-tilt p-t-140" data-tilt>
-        <%= image_tag "activate.png", alt: "IMG" %>
+    <div class="wrap-login100 profile-activation">
+      <div class="login100-pic">
+        <div class="js-tilt" data-tilt>
+          <%= image_tag "activate.png", alt: "IMG" %>
+        </div>
       </div>
       <%= form_with url: user_profiles_path, model: @profile, local: true,
         class: "login100-form validate-form" do |form| %>
@@ -44,7 +46,7 @@
           <div>
             <%= form.label t(".avatar") %>
           </div>
-          <div class="p-l-70">
+          <div class="p-l-50">
             <%= form.file_field :avatar_url,
               accept: "image/jpeg, image/jpg, image/png" %>
           </div>
@@ -83,8 +85,6 @@
         </div>
         <div class="container-login100-form-btn">
           <%= form.submit t(".save"), class: "login100-form-btn" %>
-        </div>
-        <div class="p-t-150">
         </div>
       <% end %>
     </div>

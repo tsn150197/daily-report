@@ -1,0 +1,30 @@
+.login-custom {
+  padding: 100px 130px 100px 95px;
+}
+
+.activate-custom {
+  padding: 100px 130px 100px 95px;
+  .login100-pic {
+    padding-top: 50px;
+  }
+}
+
+.profile-activation {
+  padding: 20px 130px 20px 95px;
+  .login100-pic {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .login100-pic {
+    padding-top: 10%;
+    width: 35%;
+  }
+  .activate-custom {
+    .login100-pic {
+      padding-top: 10%;
+      width: 35%;
+    }
+  }
+}

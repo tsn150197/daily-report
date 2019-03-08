@@ -149,6 +149,14 @@ en:
         create_report: Create report
         show_list_reports: Show list reports
     reports:
+      report:
+        title: Title
+        date: Date
+        approve: Approve
+        view: View
+        edit: Edit
+        delete: Delete
+        message_delete: You want to delete the report have title is %{title}?
       index:
         list_report: List report
         title: Title

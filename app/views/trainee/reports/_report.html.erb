@@ -6,7 +6,7 @@
     <%= t ".title" %>: <%= report.title %>
   </h6>
   <h6 class="row mL-50">
-    <%= t ".date" %>: <%= report.date %>
+    <%= t ".date" %>: <%= l report.date, format: :date %>
   </h6>
   <h6 class="row mL-50">
     <%= t ".approve" %>:
@@ -34,7 +34,7 @@
         <i class="c-red-500 fa fa-times"></i>
       </span>
       <%= link_to t(".delete"), trainee_report_path(report.id), method: :delete,
-        data: {confirm: t(".message_delete")}, class: "c-red-500" %>
+        data: {confirm: t(".message_delete", title: report.title)}, class: "c-red-500" %>
     </span>
   </div>
 </div>

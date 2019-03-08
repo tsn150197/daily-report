@@ -2,7 +2,7 @@
 <% provide :icon, "icons/login.ico" %>
 <div class="limiter">
   <div class="container-login100">
-    <div class="wrap-login100">
+    <div class="wrap-login100 activate-custom">
       <div class="login100-pic js-tilt" data-tilt>
         <%= image_tag "activate.png", alt: "IMG" %>
       </div>
@@ -11,7 +11,7 @@
         <span class="login100-form-title">
           <%= t ".title" %>
         </span>
-        <div class="wrap-input100">
+        <div>
           <% flash.each do |message_type, message| %>
             <div class="alert alert-<%= message_type %> mT-30"><%= message %></div>
           <% end %>
@@ -45,8 +45,6 @@
         </div>
         <div class="container-login100-form-btn">
           <%= form.submit t(".activate"), class: "login100-form-btn" %>
-        </div>
-        <div class="p-t-150">
         </div>
       <% end %>
     </div>
