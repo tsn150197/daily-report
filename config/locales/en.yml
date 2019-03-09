@@ -29,6 +29,13 @@ en:
       logout: Logout
     sidebar:
       daily_report: Daily report
+    current_profile:
+      profile: Profile
+      name: Name
+      gender: Gender
+      birthday: Birthday
+      address: Address
+      phone: Phone
   shared:
     home:
       home_page: Home page

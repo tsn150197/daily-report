@@ -29,6 +29,13 @@ vi:
       logout: Đăng xuất
     sidebar:
       daily_report: Báo cáo hàng ngày
+    current_profile:
+      profile: Hồ sơ
+      name: Tên
+      gender: Giới tính
+      birthday: Ngày sinh
+      address: Địa chỉ
+      phone: Điện thoại
   shared:
     home:
       home_page: Trang chủ
