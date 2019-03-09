@@ -1,0 +1,55 @@
+<div class="profile__photo">
+  <% if @profile.avatar_url.url %>
+    <%= image_tag @profile.avatar_url.url %>
+  <% else %>
+    <%= image_tag "default_avatar.png" %>
+  <% end %>
+</div>
+<div class="profile__text edit-profile">
+  <h1><%= t ".edit_profile" %></h1>
+  <%= form_with url: profile_path, mothod: :PATCH, model: @profile,
+    local: true do |f| %>
+    <div class="mT-20">
+      <%= render "shared/error_messages", object: f.object %>
+    </div>
+    <div class="mT-20">
+      <h6 class="c-red-500"><%= f.label t("name") %></h6>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="mT-20">
+      <h6 class="c-red-500"><%= f.label t("gender") %></h6>
+      <span class="mL-50">
+        <%= f.radio_button :gender, "male" %>
+        <%= label :gender, t("male") %>
+      </span>
+      <span class="mL-50">
+        <%= f.radio_button :gender, "female" %>
+        <%= label :gender, t("female") %>
+      <span>
+    </div>
+    <div class="mT-20">
+      <h6 class="c-red-500"><%= f.label t("avatar") %></h6>
+      <%= f.file_field :avatar_url,
+        accept: "image/jpeg, image/jpg, image/png" %>
+    </div>
+    <div class="mT-20">
+      <h6 class="c-red-500"><%= f.label t("birthday") %></h6>
+      <%= f.date_field :birthday, class: "form-control" %>
+    </div>
+    <div class="mT-20">
+      <h6 class="c-red-500"><%= f.label t("address") %></h6>
+      <%= f.text_field :address, class: "form-control" %>
+    </div>
+    <div class="mT-20">
+      <h6 class="c-red-500"><%= f.label t("phone") %></h6>
+      <%= f.text_field :phone, class: "form-control" %>
+    </div>
+    <div class="mT-20">
+      <%= f.button t(".update"), class: "btn btn-primary",
+        data: { confirm: t(".confirm") } %>
+    </div>
+  <% end %>
+</div>
+<%= link_to "#", class: "profile__close" do %>
+  <i class="fa fa-times"></i>
+<% end %>

@@ -36,9 +36,9 @@
     <%= link_to "#", class: "profile__close" do %>
       <i class="fa fa-times"></i>
     <% end %>
-    <%= link_to "", class: "profile__edit" do %>
+    <%= link_to edit_profile_path(current_user.user_profile), remote: true,
+      class: "profile__edit" do %>
       <i class="fa fa-edit"></i>
-
     <% end %>
   </div>
 </div>

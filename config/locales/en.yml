@@ -1,4 +1,13 @@
 en:
+  male: Male
+  female: Female
+  edit_profile: Edit profile
+  avatar: Avatar
+  name: Name
+  gender: Gender
+  birthday: Birthday
+  address: Address
+  phone: Phone
   activerecord:
     attributes:
       report:
