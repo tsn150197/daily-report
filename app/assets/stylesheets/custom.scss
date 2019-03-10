@@ -205,6 +205,13 @@ $color-popup: #9191E9;
       line-height: 1.5;
     }
   }
+  .custom-change-password {
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  .password-inner {
+    max-height: 500px;
+  }
   .edit-profile {
     overflow-y: scroll;
   }

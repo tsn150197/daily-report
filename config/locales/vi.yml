@@ -40,6 +40,13 @@ vi:
       birthday: Ngày sinh
       address: Địa chỉ
       phone: Điện thoại
+    change_password:
+      change_password: Đổi mật khẩu
+      current_password: Mật khẩu hiện tại
+      new_password: Mật khẩu mới
+      password_confirmation: Nhập lại mật khẩu
+      update: Cập nhật
+      confirm: Bạn muốn đổi mật khẩu?
   shared:
     home:
       home_page: Trang chủ
