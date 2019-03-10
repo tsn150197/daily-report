@@ -1,5 +1,7 @@
 class ProfilesController < ApplicationController
+  before_action :logged_in_user, only: %i(edit update)
   before_action :find_user, only: %i(new create)
+  before_action :find_profile, only: %i(edit update)
 
   def new
     @profile = @user.build_user_profile
@@ -18,6 +20,25 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def edit
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @profile.update profile_params
+        flash[:success] = t ".update_success"
+        format.html{redirect_to root_path}
+        format.js
+      else
+        flash.now[:danger] = t ".update_fail"
+        format.js{render action: "edit"}
+      end
+    end
+  end
+
   private
 
   def profile_params
@@ -29,5 +50,11 @@ class ProfilesController < ApplicationController
     return if @user = User.find_by(id: params[:user_id])
     flash[:danger] = t ".user_not_found"
     redirect_to root_path
+  end
+
+  def find_profile
+    return if @profile = UserProfile.find_by(id: params[:id])
+    flash[:danger] = t ".profile_not_found"
+    redirect_to send("#{current_user.type.downcase}_root_path")
   end
 end

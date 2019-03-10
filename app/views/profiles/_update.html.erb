@@ -1,0 +1,41 @@
+<div class="popup__photo">
+  <% if current_user.user_profile.avatar_url.url %>
+    <%= image_tag current_user.user_profile.avatar_url.url %>
+  <% else %>
+    <%= image_tag "default_avatar.png" %>
+  <% end %>
+</div>
+<div class="popup__text">
+  <h1><%= t ".profile" %></h1>
+  <%= render "shared/flash" %>
+  <p>
+    <%= t ".name" %>: <%= current_user.user_profile.name %>
+  </p>
+  <p>
+    <%= t ".gender" %>:
+    <% if current_user.user_profile.gender? %>
+      <%= UserProfile.human_enum_name :gender,
+        :"#{current_user.user_profile.gender}" %>
+    <% end %>
+  </p>
+  <p>
+    <%= t ".birthday" %>:
+    <% if current_user.user_profile.birthday? %>
+      <%= I18n.l current_user.user_profile.birthday,
+        format: :date %>
+    <% end %>
+  </p>
+  <p>
+    <%= t ".address" %>: <%= current_user.user_profile.address %>
+  </p>
+  <p>
+    <%= t ".phone" %>: <%= current_user.user_profile.phone %>
+  </p>
+</div>
+<%= link_to "#", class: "popup__close" do %>
+  <i class="fa fa-times"></i>
+<% end %>
+<%= link_to edit_profile_path(current_user.user_profile), remote: true,
+  class: "popup__edit" do %>
+  <i class="fa fa-edit"></i>
+<% end %>

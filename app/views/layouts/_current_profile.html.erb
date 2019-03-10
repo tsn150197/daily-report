@@ -1,5 +1,5 @@
 <div class="popup" id="profile">
-  <div class="popup-inner">
+  <div class="popup-inner profile-inner">
     <div class="popup__photo">
       <% if current_user.user_profile.avatar_url.url %>
         <%= image_tag current_user.user_profile.avatar_url.url %>
@@ -36,7 +36,8 @@
     <%= link_to "#", class: "popup__close" do %>
       <i class="fa fa-times"></i>
     <% end %>
-    <%= link_to "", class: "popup__edit" do %>
+    <%= link_to edit_profile_path(current_user.user_profile), remote: true,
+      class: "popup__edit" do %>
       <i class="fa fa-edit"></i>
     <% end %>
   </div>

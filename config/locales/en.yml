@@ -262,3 +262,22 @@ en:
       success: Update profile successfully
       danger: Incorrect current password
       user_not_found: User not found
+    edit:
+      profile_not_found: Profile not found!
+    update:
+      profile_not_found: Profile not found!
+      update_success: Profile updated successfully
+      update_fail: Profile update failed
+    edit_profile:
+      edit_profile: Edit profile
+      male: Male
+      female: Female
+      edit_profile: Edit profile
+      avatar: Avatar
+      name: Name
+      gender: Gender
+      birthday: Birthday
+      address: Address
+      phone: Phone
+      update: Update
+      confirm: You want to update profile?

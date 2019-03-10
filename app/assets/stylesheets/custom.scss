@@ -177,7 +177,7 @@ $color-popup: #9191E9;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 45%;
+    width: 30%;
     height: 100%;
     overflow: hidden;
     margin-bottom: 150px;
@@ -189,7 +189,6 @@ $color-popup: #9191E9;
   &__text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 60%;
     height: 100%;
     padding: 4rem;
@@ -205,6 +204,9 @@ $color-popup: #9191E9;
       color: #686868;
       line-height: 1.5;
     }
+  }
+  .edit-profile {
+    overflow-y: scroll;
   }
   &:target {
     visibility: visible;

@@ -262,3 +262,21 @@ vi:
       success: Cập nhật hồ sơ thành công
       danger: Mật khẩu hiện tại không chính xác
       user_not_found: Không tìm thấy người dùng
+    edit:
+      profile_not_found: Không tìm thấy hồ sơ
+    update:
+      profile_not_found: Không tìm thấy hồ sơ
+      update_success: Hồ sơ đã được cập nhật thành công
+      update_fail: Cập nhật hồ sơ không thành công
+    edit_profile:
+      edit_profile: Chỉnh sửa hồ sơ
+      male: Name
+      female: Nữ
+      avatar: Hình đại diện
+      name: Tên
+      gender: Giới tính
+      birthday: Ngày sinh
+      address: Địa chỉ
+      phone: Điện thoại
+      update: Cập nhật
+      confirm: Bạn muốn cập nhật hồ sơ?
