@@ -33,6 +33,13 @@ en:
       logout: Logout
     sidebar:
       daily_report: Daily report
+    current_profile:
+      profile: Profile
+      name: Name
+      gender: Gender
+      birthday: Birthday
+      address: Address
+      phone: Phone
   shared:
     home:
       home_page: Home page
@@ -240,6 +247,7 @@ en:
       warning: Current password and new password cannot be the same
   profiles:
     new:
+      preview_avatar: Preview avatar
       create_profile: Create profile
       name: Name
       gender: Gender

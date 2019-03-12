@@ -33,6 +33,13 @@ vi:
       logout: Đăng xuất
     sidebar:
       daily_report: Báo cáo hàng ngày
+    current_profile:
+      profile: Hồ sơ
+      name: Tên
+      gender: Giới tính
+      birthday: Ngày sinh
+      address: Địa chỉ
+      phone: Điện thoại
   shared:
     home:
       home_page: Trang chủ
@@ -240,6 +247,7 @@ vi:
       warning: Mật khẩu hiện tại và mật khẩu mới không được trùng nhau.
   profiles:
     new:
+      preview_avatar: Xem trước ảnh đại diện
       create_profile: Tạo hồ sơ
       name: Tên
       gender: Giới tính

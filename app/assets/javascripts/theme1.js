@@ -3,6 +3,7 @@
 //= require LoginForm1byColorlib/bootstrap/js/bootstrap.min
 //= require LoginForm1byColorlib/tilt/tilt.jquery.min
 //= require LoginForm1byColorlib/js/main
+//= require preview_image
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks

@@ -5,8 +5,10 @@
     <div class="wrap-login100 profile-activation">
       <div class="login100-pic">
         <div class="js-tilt" data-tilt>
-          <%= image_tag "activate.png", alt: "IMG" %>
+          <%= image_tag "activate.png", alt: "avatar", id: "avatar",
+            class: "hidden image_to_upload" %>
         </div>
+        <div class="text-center"><%= t ".preview_avatar" %></div>
       </div>
       <%= form_with url: user_profiles_path, model: @profile, local: true,
         class: "login100-form validate-form" do |form| %>
@@ -48,7 +50,8 @@
           </div>
           <div class="p-l-50">
             <%= form.file_field :avatar_url,
-              accept: "image/jpeg, image/jpg, image/png" %>
+            accept: "image/jpeg, image/jpg, image/png",
+            class: "photo_upload" %>
           </div>
         </div>
         <div class="wrap-input100">
