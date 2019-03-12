@@ -46,4 +46,8 @@ class User < ApplicationRecord
     return false unless remember_digest
     BCrypt::Password.new(remember_digest).is_password? remember_token
   end
+
+  def current_user? user
+    self == user
+  end
 end

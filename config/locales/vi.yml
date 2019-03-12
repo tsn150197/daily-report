@@ -1,4 +1,8 @@
 vi:
+  js:
+    comments:
+      delete: Bình luận đã bị xóa
+      confirm: Bạn muốn xóa bình luận này
   activerecord:
     attributes:
       report:
@@ -54,7 +58,7 @@ vi:
       message_delete: Bạn có muốn xóa báo cáo này?
   comments:
     comment:
-      comment_at: bình luận lúc
+      at: lúc
   admin:
     sidebar:
       item:

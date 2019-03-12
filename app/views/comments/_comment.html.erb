@@ -1,14 +1,26 @@
-<div class="mB-20">
+<div class="mB-50" data-comment-id="<%= comment.id %>">
   <div class="text-muted row">
     <span class="c-red-400">
+      <% if comment.user.user_profile.avatar_url? %>
+        <%= image_tag comment.user.user_profile.avatar_url.url , class: "w-2r" %>
+      <% else %>
+        <%= image_tag "default_avatar.png", class: "w-2r" %>
+      <% end %>
       <%= comment.user.user_profile.name %>
     </span>
-    <i class="fc-day-number">
-      <%= t ".comment_at" %> <%= l comment.created_at, format: :datetime %>
-    </i>
   </div>
-  <div class="row peers fxw-nw ai-c pY-3 pX-10
-    bgc-green-50 bdrs-2 lh-3/2 comment-content">
+  <div class="row peers fxw-nw ai-c pY-3 pX-10 lh-3/2 comment-content">
     <%= comment.content %>
+  </div>
+  <div class="row float-right mR-30">
+    <i><%= t ".at" %> <%= l comment.created_at, format: :datetime %></i>
+  </div>
+  <div class="row float-right" style="clear:right">
+    <% if current_user.current_user? comment.user %>
+      <a href="#" class="mR-30 c-red-200 delete-comment" data-comment-id="<%= comment.id %>">
+        <i class="fa fa-lg fa-times"></i>
+      </a>
+    <% end %>
+    <a href="#" class="mR-30"><i class="fa fa-lg fa-reply"></i></a>
   </div>
 </div>
