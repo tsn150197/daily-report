@@ -23,5 +23,6 @@ module DailyReport
     config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
     config.active_record.default_timezone = :local
     config.time_zone = ActiveSupport::TimeZone[Time.now.strftime('%z').gsub('0', '').to_i]
+    config.middleware.use I18n::JS::Middleware
   end
 end

@@ -10,6 +10,25 @@ class ReportsChannel < ApplicationCable::Channel
     return unless comment.save
     ActionCable.server.broadcast "reports_#{comment.report.id}_channel",
       user_name: comment.user.user_profile.name, comment: comment.content,
-      created_at: I18n.l(comment.created_at, format: :datetime)
+        created_at: I18n.l(comment.created_at, format: :datetime),
+          user_avatar: check_avatar(comment)
+  end
+
+  def delete_comment data
+    comment = current_user.comments.find_by id: data["comment_id"]
+
+    return unless comment.destroy
+    ActionCable.server.broadcast "reports_#{comment.report.id}_channel",
+      comment_id: comment.id, delete: true
+  end
+
+  private
+
+  def check_avatar comment
+    if comment.user.user_profile.avatar_url.url
+      comment.user.user_profile.avatar_url.url
+    else
+      "/assets/default_avatar.png"
+    end
   end
 end
