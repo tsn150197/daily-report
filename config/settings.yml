@@ -8,3 +8,6 @@ window_pagination: 2
 user_avt_size: 130
 remember_me: "1"
 no_approve: 0
+min_date: 1900-01-01
+max_date: 2100-01-01
+string_maximum: 255
