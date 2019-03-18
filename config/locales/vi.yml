@@ -290,3 +290,38 @@ vi:
       phone: Điện thoại
       update: Cập nhật
       confirm: Bạn muốn cập nhật hồ sơ?
+  password_resets:
+    new:
+      forgot_password: Quên mật khẩu
+      valid_email: "Email là bắt buộc và có dạng: ex@abc.xyz"
+      submit: Gửi đi
+    create:
+      send_email_user: Đã gửi tới email với hướng dẫn đặt lại mật khẩu
+      user_not_found: Không tìm thấy người dùng với địa chỉ email
+      user_not_valid: Người dùng chưa kích hoạt hoặc không thể xác thực
+        mã đặt lại mật khẩu
+    edit:
+      reset_password: Reset password
+      password: Password
+      password_confirm: Password confirmation
+      submit: Submit
+      user_not_found: Không tìm thấy người dùng với địa chỉ email
+      user_not_valid: Người dùng chưa kích hoạt hoặc không thể xác thực
+        mã đặt lại mật khẩu
+      expired_warning: Đặt lại mật khẩu đã hết hạn
+    update:
+      user_not_found: Không tìm thấy người dùng với địa chỉ email
+      user_not_valid: Người dùng chưa kích hoạt hoặc không thể xác thực
+        mã đặt lại mật khẩu
+      expired_warning: Đặt lại mật khẩu đã hết hạn
+      email_empty: không thể để trống
+      reset_success: Mật khẩu đã được đặt lại
+      not_reset_password: Không thể đặt lại mật khẩu
+  user_mailer:
+    password_reset:
+      password_reset: Đặt lại mật khẩu
+      reset_password: Đặt lại mật khẩu
+      content1: Để thiết lập lại mật khẩu của bạn, nhấp vào liên kết dưới đây
+      content2: Liên kết này sẽ hết hạn sau một giờ nữa
+      content3: Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua
+        email này và mật khẩu của bạn sẽ được giữ nguyên

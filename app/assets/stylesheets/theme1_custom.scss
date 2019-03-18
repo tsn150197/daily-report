@@ -16,6 +16,23 @@
   }
 }
 
+.forgot-password {
+  padding: 50px 130px 0px 95px;
+  .login100-pic {
+    padding-bottom: 50px;
+  }
+  .login100-form {
+    padding-top: 50px;
+  }
+}
+
+.reset-password {
+  padding: 50px 130px 50px 95px;
+  .login100-form {
+    padding-top: 30px;
+  }
+}
+
 @media (max-width: 992px) {
   .login100-pic {
     padding-top: 10%;

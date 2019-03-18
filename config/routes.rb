@@ -32,5 +32,6 @@ Rails.application.routes.draw do
     end
     resources :profiles, only: %i(edit update)
     resources :passwords, only: %i(update)
+    resources :password_resets, only: %i(new create edit update)
   end
 end

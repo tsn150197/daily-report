@@ -1,0 +1,29 @@
+<%= provide :title, t(".forgot_password") %>
+<%= provide :icon, "icons/forgot-password-icon.png" %>
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100 forgot-password">
+      <div class="login100-pic js-tilt" data-tilt>
+        <%= image_tag "forgot-password.jpg" %>
+      </div>
+      <%= form_with url: password_resets_path,
+        class: "login100-form validate-form", local: true do |f| %>
+        <span class="login100-form-title">
+          <%= t ".forgot_password" %>
+        </span>
+        <%= render "shared/flash" %>
+        <div class="wrap-input100 validate-input"
+          data-validate="<%= t ".valid_email" %>">
+          <%= f.text_field :email, class: "input100", placeholder: :Email %>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="container-login100-form-btn">
+          <%= f.submit t(".submit"), class: "login100-form-btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

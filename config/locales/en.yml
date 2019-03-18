@@ -282,7 +282,6 @@ en:
       edit_profile: Edit profile
       male: Male
       female: Female
-      edit_profile: Edit profile
       avatar: Avatar
       name: Name
       gender: Gender
@@ -291,3 +290,38 @@ en:
       phone: Phone
       update: Update
       confirm: You want to update profile?
+  password_resets:
+    new:
+      forgot_password: Forgot password
+      valid_email: "Valid email is required: ex@abc.xyz"
+      submit: Submit
+    create:
+      send_email_user: Email sent with password reset instructions
+      user_not_found: User not found with email address
+      user_not_valid: User has not activated or cannot authenticate
+        password reset token
+    edit:
+      reset_password: Reset password
+      password: Password
+      password_confirm: Password confirmation
+      submit: Submit
+      user_not_found: User not found with email address
+      user_not_valid: User has not activated or cannot authenticate
+        password reset token
+      expired_warning: Password reset has expired
+    update:
+      user_not_found: User not found with email address
+      user_not_valid: User has not activated or cannot authenticate
+        password reset token
+      expired_warning: Password reset has expired
+      email_empty: can't be empty
+      reset_success: Password has been reset
+      not_reset_password: Unable to reset password
+  user_mailer:
+    password_reset:
+      password_reset: Password reset
+      reset_password: Reset password
+      content1: To reset your password click the link below
+      content2: This link will expire in one hours
+      content3: If you did not request your password to be reset, please ignore
+        this email and your password will stay as it is

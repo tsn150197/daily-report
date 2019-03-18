@@ -32,3 +32,6 @@
 /config/environments/*.local.yml
 
 /public/uploads
+
+# Ignore application configuration
+/config/application.yml
