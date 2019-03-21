@@ -42,14 +42,13 @@
               <% end %>
             </div>
             <div class="row mT-30">
-              <div class="col-md-12">
-                <% flash.each do |message_type, message| %>
-                  <div class="alert alert-<%= message_type %> mT-30">
-                    <%= message %>
-                  </div>
-                <% end %>
+              <div class="col-md-12 flash-report">
+                <%= render "shared/flash" %>
               </div>
-              <div class="col-lg-12 row mL-5" id="trainee-reports">
+              <div class="col-lg-12 row mB-20 center-flex"
+                  id="delete-selection">
+              </div>
+              <div class="col-lg-12 row mL-5" id="list-reports">
                 <%= render partial: "report", collection: @reports %>
               </div>
               <div class="row col-md-12" id="paginate-reports">

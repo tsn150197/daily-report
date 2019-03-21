@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     namespace :trainee do
       root "home#index"
       resources :reports
+      resources :bulk_reports, only: %i(destroy)
       resources :filter_reports, only: %i(index)
     end
     resources :logins, only: %i(create)

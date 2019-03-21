@@ -2,6 +2,7 @@
  *= require font-awesome
  *= require AdminatorByColorlib/themify-icons
  *= require AdminatorByColorlib/style
+ *= require context-menu
  *= require custom
  *= require_self
  */

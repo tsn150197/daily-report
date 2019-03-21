@@ -3,6 +3,13 @@ en:
     comments:
       delete: Comment has been deleted
       confirm: You want to delete this comment?
+    reports:
+      view: View
+      edit: Edit
+      delete: Delete
+      confirm_delete: You want to delete this report?
+      confirm_delete_select: You want to delete selected reports?
+      delete_selected: Delete selected reports
   activerecord:
     min_date: is too earlier (minimum is %{date})
     max_date: is too latest (maximum is %{date})
@@ -221,6 +228,12 @@ en:
         delete_success: Delete report successful
         delete_danger: Cannot delete report!
         report_not_found: Report not found!
+    bulk_reports:
+      destroy:
+        delete_reports: The selected reports has been deleted
+        status_approved: The approved reports cannot be deleted!
+        not_delete: There was an error deleting the report
+        not_find_report: Reports not found
   views:
     pagination:
       first: "&laquo; First"

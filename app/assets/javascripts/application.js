@@ -2,10 +2,13 @@
 //= require AdminatorByColorlib/bundle
 //= require jquery
 //= require rails-ujs
+//= require selectable
+//= require js-routes
 //= require ckeditor/init
 //= require activestorage
 //= require cable
+//= require context-menu
 //= require custom
-//= require i18n
-//= require i18n.js
+//= require report_contextmenu
+//= require report_selectable
 //= require i18n/translations

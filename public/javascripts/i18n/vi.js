@@ -1,2 +1,2 @@
 I18n.translations || (I18n.translations = {});
-I18n.translations["vi"] = I18n.extend((I18n.translations["vi"] || {}), {"js":{"comments":{"confirm":"Bạn muốn xóa bình luận này","delete":"Bình luận đã bị xóa"}}});
+I18n.translations["vi"] = I18n.extend((I18n.translations["vi"] || {}), {"js":{"comments":{"confirm":"Bạn muốn xóa bình luận này?","delete":"Bình luận đã bị xóa"},"reports":{"confirm_delete":"Bạn muốn xóa báo cáo này?","confirm_delete_select":"Bạn muốn xóa các báo cáo được chọn?","delete":"Xóa","delete_selected":"Xóa các báo cáo đã chọn","edit":"Sửa","view":"Xem"}}});

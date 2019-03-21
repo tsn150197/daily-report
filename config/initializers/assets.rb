@@ -4,3 +4,4 @@ Rails.application.config.assets.paths +=
   Dir["#{Rails.root}/vendor/*"].sort_by { |dir| -dir.size }
 Rails.application.config.assets.precompile += %w(theme1.js theme1.css)
 Rails.application.config.assets.precompile += %w(ckeditor/*)
+Rails.application.config.assets.precompile += %w(i18n.js)

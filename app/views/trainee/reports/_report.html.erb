@@ -1,40 +1,21 @@
-<div class="col-md-3 mB-30">
-  <div class="row mL-80 image-report">
-    <%= image_tag "report.png" %>
-  </div>
-  <h6 class="row mL-50">
-    <%= t ".title" %>: <%= report.title %>
-  </h6>
-  <h6 class="row mL-50">
-    <%= t ".date" %>: <%= l report.date, format: :date %>
-  </h6>
-  <h6 class="row mL-50">
-    <%= t ".approve" %>:
-    <%= Report.human_enum_name(:status, :"#{report.status}") %>
-  </h6>
-  <div class="row link_to mL-50">
-    <span class="mR-30">
-      <span class="icon-holder">
-        <i class="c-blue-500 fa fa-eye"></i>
-      </span>
-      <%= link_to t(".view"), trainee_report_path(report.id),
-        class: "c-blue-500" %>
-    </span>
-    <% if report.rejected? %>
-      <span class="mR-30">
-        <span class="icon-holder">
-          <i class="c-orange-500 fa fa-edit"></i>
-        </span>
-        <%= link_to t(".edit"), edit_trainee_report_path(report.id),
-          class: "c-orange-500" %>
-      </span>
-    <% end %>
-    <span class="mR-30">
-      <span class="icon-holder">
-        <i class="c-red-500 fa fa-times"></i>
-      </span>
-      <%= link_to t(".delete"), trainee_report_path(report.id), method: :delete,
-        data: {confirm: t(".message_delete", title: report.title)}, class: "c-red-500" %>
-    </span>
+<div class="col-md-3">
+  <div class="col-md-12 mB-30 p-20 report-infor" id="<%= report.id %>"
+    data-status="<%= report.status %>">
+    <div class="row center-flex image-report">
+      <%= image_tag "report.png" %>
+    </div>
+    <div class="center-grid">
+      <h6 class="row">
+        <%= t ".title" %>:
+        <%= link_to report.title, trainee_report_path(report.id) %>
+      </h6>
+      <h6 class="row">
+        <%= t ".date" %>: <%= l report.date, format: :date %>
+      </h6>
+      <h6 class="row">
+        <%= t ".approve" %>:
+        <%= Report.human_enum_name(:status, :"#{report.status}") %>
+      </h6>
+    </div>
   </div>
 </div>

@@ -2,7 +2,14 @@ vi:
   js:
     comments:
       delete: Bình luận đã bị xóa
-      confirm: Bạn muốn xóa bình luận này
+      confirm: Bạn muốn xóa bình luận này?
+    reports:
+      view: Xem
+      edit: Sửa
+      delete: Xóa
+      confirm_delete: Bạn muốn xóa báo cáo này?
+      confirm_delete_select: Bạn muốn xóa các báo cáo được chọn?
+      delete_selected: Xóa các báo cáo đã chọn
   activerecord:
     min_date: quá sớm (nhỏ nhất là %{date})
     max_date: quá muộn (lớn nhất là %{date})
@@ -221,6 +228,12 @@ vi:
         delete_success: Xóa báo cáo thành công
         delete_danger: Không thể xóa báo cáo!
         report_not_found: Không tìm thấy báo cáo!
+    bulk_reports:
+      destroy:
+        delete_reports: Các báo cáo đã chọn đã được xóa
+        status_approved: Các báo cáo đã phê duyệt không thể xóa!
+        not_delete: Có lỗi xảy ra khi xóa báo cáo
+        not_find_report: Không tìm thấy báo cáo
   views:
     pagination:
       first: "&laquo; Đầu"

@@ -19,6 +19,11 @@
       <%= javascript_include_tag "theme1",
         "data-turbolinks-track": "reload", defer: true %>
     <% end %>
+    <%= javascript_include_tag "i18n" %>
+    <script>
+      I18n.defaultLocale = "<%= I18n.default_locale %>"
+      I18n.locale = "<%= I18n.locale || I18n.default_locale %>"
+    </script>
     <%= render "layouts/shim" %>
   </head>
 
