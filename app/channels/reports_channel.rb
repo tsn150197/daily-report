@@ -4,14 +4,14 @@ class ReportsChannel < ApplicationCable::Channel
   end
 
   def send_comment data
-    comment = current_user.comments.build content: data["comment"],
-      report_id: data["report_id"]
+    comment = build_comment data
 
     return unless comment.save
     ActionCable.server.broadcast "reports_#{comment.report.id}_channel",
-      user_name: comment.user.user_profile.name, comment: comment.content,
-        created_at: I18n.l(comment.created_at, format: :datetime),
-          user_avatar: check_avatar(comment), comment_id: comment.id
+      user_name: current_user.user_profile.name, comment: comment.content,
+      created_at: I18n.l(comment.created_at, format: :datetime),
+      user_avatar: check_avatar(comment), comment_id: comment.id,
+      user_id: current_user.id
   end
 
   def delete_comment data
@@ -30,5 +30,10 @@ class ReportsChannel < ApplicationCable::Channel
     else
       "/assets/default_avatar.png"
     end
+  end
+
+  def build_comment data
+    current_user.comments.build content: data["comment"],
+      report_id: data["report_id"]
   end
 end
