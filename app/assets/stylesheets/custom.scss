@@ -118,8 +118,9 @@ blockquote {
   background: rgba(0, 255, 13, 0.1);
 }
 
-.float-right {
-  float: right
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .size-img-report {

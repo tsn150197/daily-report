@@ -1,4 +1,4 @@
-<div class="mB-50" data-comment-id="<%= comment.id %>">
+<div class="mB-10" data-comment-id="<%= comment.id %>">
   <div class="text-muted row">
     <span class="c-red-400">
       <% if comment.user.user_profile.avatar_url? %>
@@ -12,15 +12,20 @@
   <div class="row peers fxw-nw ai-c pY-3 pX-10 lh-3/2 comment-content">
     <%= comment.content %>
   </div>
-  <div class="row float-right mR-30">
+  <div class="row flex-right mR-30">
     <i><%= t ".at" %> <%= l comment.created_at, format: :datetime %></i>
   </div>
-  <div class="row float-right" style="clear:right">
+  <div class="row flex-right">
     <% if current_user.current_user? comment.user %>
       <a href="#" class="mR-30 c-red-200 delete-comment" data-comment-id="<%= comment.id %>">
         <i class="fa fa-lg fa-times"></i>
       </a>
     <% end %>
-    <a href="#" class="mR-30"><i class="fa fa-lg fa-reply"></i></a>
+    <a href="#" class="mR-30 reply-comment">
+      <i class="fa fa-lg fa-reply"></i>
+    </a>
+  </div>
+  <div class="comment-replies pL-60" id="reply-id-<%= comment.id %>">
+    <%= comments_children comment.children %>
   </div>
 </div>

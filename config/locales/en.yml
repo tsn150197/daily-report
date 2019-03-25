@@ -3,6 +3,7 @@ en:
     comments:
       delete: Comment has been deleted
       confirm: You want to delete this comment?
+      reply: Reply
     reports:
       view: View
       edit: Edit
@@ -83,6 +84,8 @@ en:
   comments:
     comment:
       at: at
+    comment_reply:
+      reply_at: Reply at
   admin:
     sidebar:
       item:

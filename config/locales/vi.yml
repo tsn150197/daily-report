@@ -3,6 +3,7 @@ vi:
     comments:
       delete: Bình luận đã bị xóa
       confirm: Bạn muốn xóa bình luận này?
+      reply: Trả lời
     reports:
       view: Xem
       edit: Sửa
@@ -83,6 +84,8 @@ vi:
   comments:
     comment:
       at: lúc
+    comment_reply:
+      reply_at: Trả lời lúc
   admin:
     sidebar:
       item:

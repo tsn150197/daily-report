@@ -16,10 +16,22 @@ class ReportsChannel < ApplicationCable::Channel
 
   def delete_comment data
     comment = current_user.comments.find_by id: data["comment_id"]
+    comment.descendants.each(&:destroy)
 
     return unless comment.destroy
     ActionCable.server.broadcast "reports_#{comment.report.id}_channel",
       comment_id: comment.id, delete: true
+  end
+
+  def reply_comment data
+    comment = build_comment_reply data
+
+    return unless comment.save
+    ActionCable.server.broadcast "reports_#{comment.report.id}_channel",
+      user_name: current_user.user_profile.name, comment: comment.content,
+      created_at: I18n.l(comment.created_at, format: :datetime),
+      user_avatar: check_avatar(comment), comment_id: comment.id,
+      user_id: current_user.id, parent_id: comment.parent.id, reply: true
   end
 
   private
@@ -35,5 +47,11 @@ class ReportsChannel < ApplicationCable::Channel
   def build_comment data
     current_user.comments.build content: data["comment"],
       report_id: data["report_id"]
+  end
+
+  def build_comment_reply data
+    parent = Comment.find_by id: data["parent_id"]
+    parent.children.build content: data["comment"],
+      report_id: data["report_id"], user_id: current_user.id
   end
 end

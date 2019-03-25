@@ -1,0 +1,29 @@
+<div data-comment-id="<%= comment_reply.id %>">
+  <div class="text-muted row">
+    <span class="c-red-400">
+      <% if comment_reply.user.user_profile.avatar_url? %>
+        <%= image_tag comment_reply.user.user_profile.avatar_url.url,
+          class: "w-2r" %>
+      <% else %>
+        <%= image_tag "default_avatar.png", class: "w-2r" %>
+      <% end %>
+      <%= comment_reply.user.user_profile.name %>
+    </span>
+  </div>
+  <div class="row peers fxw-nw ai-c pY-3 pX-10 lh-3/2 comment-content">
+    <%= comment_reply.content %>
+  </div>
+  <div class="row flex-right mR-30">
+    <i><%= t ".reply_at" %>
+      <%= l comment_reply.created_at, format: :datetime %>
+    </i>
+  </div>
+  <div class="row flex-right">
+    <% if current_user.current_user? comment_reply.user %>
+      <a href="#" class="mR-30 c-red-200 delete-comment"
+        data-comment-id="<%= comment_reply.id %>">
+        <i class="fa fa-lg fa-times"></i>
+      </a>
+    <% end %>
+  </div>
+</div>

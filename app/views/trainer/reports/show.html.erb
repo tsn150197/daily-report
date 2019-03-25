@@ -67,7 +67,7 @@
             <div class="col-md-12 mB-30" id="comments"
               data-report-id="<%= @report.id %>">
               <%= render partial: "comments/comment",
-                collection: @report.comments %>
+                collection: @report.comments.roots %>
             </div>
             <div id="comment-bottom"></div>
           </div>
