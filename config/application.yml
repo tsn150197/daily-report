@@ -1,0 +1,6 @@
+development:
+  GMAIL_USERNAME: tuancutebaby97@gmail.com
+  GMAIL_PASSWORD: hatuan220915
+production:
+  GMAIL_USERNAME: tuancutebaby97@gmail.com
+  GMAIL_PASSWORD: hatuan220915
